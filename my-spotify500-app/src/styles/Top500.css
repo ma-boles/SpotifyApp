@@ -1,0 +1,74 @@
+.top500--page {
+    overflow: auto;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    max-height: 42em;
+}
+
+
+.top500--header {
+    margin: 0px;
+    height: 26em;
+    background-color: rgb(87, 15, 87);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.top500--nav {
+    background-color: rgba(0, 0, 0, 0.185);
+    width: 100%;
+    height: 5em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0px;
+    position: fixed;
+}
+
+.top500--arrowLeft{
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: 1.2em;
+    margin-left: 1.5em;
+    padding: .6em;
+    border-radius: 180px;
+    background-color: rgb(194, 194, 194);
+    filter: invert(1);
+
+}
+.top500--arrowRight {
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: 1.2em;
+    margin-left: .6em;
+    padding: .6em;
+    border-radius: 180px;
+    background-color: rgb(194, 194, 194);
+    filter: invert(1);
+}
+
+.h1--top500 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 25px;
+    color: whitesmoke;
+    font-size: 6.5em;
+    padding-top: 2.25em;
+}
+
+.top500 {
+    background-image: linear-gradient( rgb(74, 13, 74), rgb(20, 20, 20)
+    );
+    height: 14em;
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 80em;  
+}
+
+.h2--top500 {
+    margin: 0;
+    padding-top: .5em;
+    text-indent: 30px;
+    font-size: 2em;
+    color: whitesmoke;
+    background-color: rgb(74, 13, 74);
+}

@@ -1,0 +1,25 @@
+.card--album {
+    background-color: rgb(29, 29, 29);
+    width: 16em;
+    height: 22.5em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    border-radius: 10px;
+}
+
+.album--h2 {
+    margin-top: 0;
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-bottom: 5px;
+    color: whitesmoke;
+}
+
+.album--h3 {
+    margin-top: 0;
+    margin-left: 14px;
+    margin-right: 14px;
+    font-weight: 400;
+}
