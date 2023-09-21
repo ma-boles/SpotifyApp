@@ -1,4 +1,4 @@
-import './App.css';
+import '../src/styles/App.css';
 import React from 'react';
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
@@ -7,9 +7,11 @@ import Decade from "../src/pages/Decade";
 import Genre from "../src/pages/Genre";
 import Podcasts from "../src/pages/Podcasts";
 
-import './Music-player.css';
-import Carousel from './Carousel';
-import Album from './Album';
+/*import './Music-player.css';*/
+import Carousel from './components/Carousel';
+import Album from './components/Album';
+import MusicPlayer from './components/Music-player';
+
 import home from "./images/house-solid.svg";
 import search from "./images/magnifying-glass-solid.svg";
 import library from "./images/radio-solid.svg";
@@ -57,24 +59,7 @@ function App() {
     
 }
 
-function nowPlayViewToggle () {
 
-      var arrow = document.getElementById("up-down");
-
-      if(arrow.style.transform === "none") {
-      arrow.style.transform = "rotate(180deg)"
-      } else {
-      arrow.style.transform = "none"
-    }
-
-      var nowPlay = document.getElementById("nowPlaying");
-
-      if(nowPlay.style.display === "none") {
-      nowPlay.style.display = "block"
-      } else {
-      nowPlay.style.display = "none"
-      }
-    }
 
 const slides = [{/* 
       { url: "C:\Users\USER\Personal Portfolio\my-spotify-app\src\images\carousel-neon.jpg",
@@ -108,7 +93,7 @@ const slides = [{/*
             
             <ul className='ul--bottom'>
                 <div className='line--item'>
-                  <Link to="/Top500">
+                  <Link to="/pages/Top500">
                     <img src={library} className='img--icon' alt='Top 500'></img><li>Top 500</li>
                   </Link>
                 </div>
@@ -162,7 +147,6 @@ const slides = [{/*
               <Album />
               <Album />
           </div>
-            
 
             </div>
 
@@ -176,51 +160,16 @@ const slides = [{/*
 
                         </div>
 
-          
-    
       <header className="App-header">
      </header>
 
-     /*<div className="musicPlayer">
+      <MusicPlayer />
 
-        <div className="info--album">
-            <img src={placeholder} className="placeholder-2" alt='album'></img>
-            <img src={upDown} onClick={nowPlayViewToggle} className="up-down" id="up-down" alt='arrow'></img>
-            <div className="info--album2">
-                <h3 className="h3--info--album">Track Title</h3>
-                <p className="p--info--album">Album Title</p>
-            </div>
-            <button className="button--plus"><img src={plus} className="plus" alt='add'></img></button>
-            <button className="button--pic"><img src={picNpic} className="picNpic" alt='small view'></img></button>
-
-        </div>
-
-        <div className="player">
-            <button className="button--player1"><img src={arrowRotateBack} className="arrowRotateBack" alt='arrow'></img></button>
-            <button className="button--player2"><img src={back} className="back" alt='back'></img></button>
-            {/*<button className="button--player3"><img src={pause} className="pause"></img></button>*/}
-            <button className="button--player4"><img src={play} className="play" alt='play'></img></button>
-            <button className="button--player5"><img src={forward} className="forward" alt='skip'></img></button>
-            <button className="button--player6"><img src={arrowRotateForward} className="arrowRotateForward" alt='rewind'></img></button>
-            
-       </div>
-
-        <div className="info--right">
-        <button className="button--r-player1"><img src={nowPlayingView} /*onClick={toggle5} */className="player--right1" id="player--right1" alt='now playing'></img></button>
-        <button className="button--r-player2"><img src={queue} className="player--right2" alt='queue'></img></button>
-        <button className="button--r-player3"><img src={device} className="player--right3" alt='device'></img></button>
-        <button className="button--r-player4"><img src={volume1} className="player--right4" alt='volume'></img></button>
-        {/*<button className="button--r-player4"><img src={volume2} className="player--right4"></img></button>
-        <button className="button--r-player4"><img src={volume3} className="player--right4"></img></button>*/}
-
-        {/*volume slider */}
-        <button className="button--r-player5"><img src={full} className="player--right5" alt='loudest'></img></button>
-        </div>
-
-        </div>*/
-      
     </div>
     </>
     );
   }
   export default App;
+
+  
+     

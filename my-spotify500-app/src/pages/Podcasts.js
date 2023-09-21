@@ -1,7 +1,7 @@
-import "../Podcasts.css";
+import "../styles/Podcasts.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
-import Album from "../Album";
+import Album from "../components/Album";
 
 export default function Podcasts () {
     return (

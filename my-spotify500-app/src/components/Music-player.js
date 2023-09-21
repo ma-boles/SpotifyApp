@@ -1,6 +1,42 @@
 import "../styles/Music-player.css";
 
+import placeholder from "../images/600px-Placeholder.png";
+import upDown from "../images/chevron-up-solid.svg";
+import plus from "../images/circle-plus-solid.svg";
+import picNpic from "../images/picNpic.png";
+import arrowRotateBack from "../images/arrow-rotate-left-solid.svg";
+import back from "../images/backward-step-solid.svg";
+import play from "../images/circle-play-solid.svg";
+import forward from "../images/forward-step-solid.svg";
+import arrowRotateForward from "../images/arrow-rotate-right-solid.svg";
+import nowPlayingView from "../images/square-caret-right-regular.svg";
+import queue from "../images/layer-group-solid.svg";
+import device from "../images/mobile-screen-button-solid.svg";
+import volume1 from "../images/volume-xmark-solid.svg";
+import full from "../images/up-right-and-down-left-from-center-solid.svg"
+
+
 export default function MusicPlayer () {
+
+    function nowPlayViewToggle () {
+
+        var arrow = document.getElementById("up-down");
+  
+        if(arrow.style.transform === "none") {
+        arrow.style.transform = "rotate(180deg)"
+        } else {
+        arrow.style.transform = "none"
+      }
+  
+        var nowPlay = document.getElementById("nowPlaying");
+  
+        if(nowPlay.style.display === "none") {
+        nowPlay.style.display = "block"
+        } else {
+        nowPlay.style.display = "none"
+        }
+      }
+
     return (
         <>
         <section className="musicPlayer">

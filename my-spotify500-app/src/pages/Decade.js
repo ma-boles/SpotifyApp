@@ -1,7 +1,7 @@
-import "../Decade.css";
+import "../styles/Decade.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
-import Album from "../Album";
+import Album from "../components/Album";
 
 export default function Decade () {
     return (

@@ -1,5 +1,5 @@
-import "../styles/Album.css";
-import album from "./images/album-placeholder.png"
+import "../styles/Albums.css";
+import album from "../images/album-placeholder.png"
 
 export default function Album () {
 
