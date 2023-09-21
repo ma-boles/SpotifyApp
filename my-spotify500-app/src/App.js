@@ -59,20 +59,21 @@ function App() {
     
 }
 
-
-
-const slides = [{/* 
-      { url: "C:\Users\USER\Personal Portfolio\my-spotify-app\src\images\carousel-neon.jpg",
-        title: "neon" },
-      { url: "C:\Users\USER\Personal Portfolio\my-spotify-app\src\images\carousel-shop.jpg",
-        title: "shop" },
-      { url: "C:\Users\USER\Personal Portfolio\my-spotify-app\src\images\carousel-studio.jpg",
-          title: "studio"},
-      { url:"C:\Users\USER\Personal Portfolio\my-spotify-app\src\images\carousel-noMusic.jpg",
-        title: "noMusic"},
-      { url: "C:\Users\USER\Personal Portfolio\my-spotify-app\src\images\carousel-walkman.jpg",
-          title: "walkman"}, */}
+const slides = [
+  
+  { url: "my-spotify500-app\src\images\carousel-neon.jpg",
+    title: "neon" },
+  { url: "my-spotify500-app\src\images\carousel-shop.jpg",
+    title: "shop" },
+  { url: "my-spotify500-app\src\images\carousel-studio.jpg",
+      title: "studio"},
+  { url:"my-spotify500-app\src\images\carousel-noMusic.jpg",
+    title: "noMusic"},
+  { url: "my-spotify500-app\src\images\carousel-walkman.jpg",
+      title: "walkman"}, 
 ]
+
+
 
   return (
     <>
@@ -80,7 +81,7 @@ const slides = [{/*
     <div className='home--container'>
 
         {/* STATIC NAV SIDEBAR */}
-        <div>
+        <nav>
             <ul className='ul--top'>
                 <div className='line--item'>
                   <img src={home} className='img--icon' alt='home'></img><li>Home</li>
@@ -121,12 +122,12 @@ const slides = [{/*
                 </div>
             </ul>
       
-        </div>
+        </nav>
       </div>
 
     {/* HOME -- MIDDLE SECTION */}
 
-      <div className='homePage'>
+      <section className='homePage'>
         <div className="home">
         
          <Carousel slides={slides}/>
@@ -148,7 +149,7 @@ const slides = [{/*
               <Album />
           </div>
 
-            </div>
+      </section>
 
                   {/* NOW PLAYING POPUP */}
                       <div className='nowPlaying' id='nowPlaying'>
@@ -160,8 +161,8 @@ const slides = [{/*
 
                         </div>
 
-      <header className="App-header">
-     </header>
+      {/*<header className="App-header">
+     </header>*/}
 
       <MusicPlayer />
 

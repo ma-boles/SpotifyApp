@@ -90,7 +90,11 @@ a {
 
 }
 
-
+.top10 {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
 /*middle column*/
 
 .homePage {
