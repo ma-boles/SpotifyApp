@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "../styles/Carousel.css";
 
+import neon from "../images/carousel-neon.jpg"
+
+
+export default function Carousel( ) {
 
 const slideStyles = {
   width: "100%",
@@ -49,9 +53,11 @@ const dotStyle = {
 };
 
 const slides = [
-  
+  /*
   { url: "my-spotify500-app\src\images\carousel-neon.jpg",
-    title: "neon" },
+    title: "neon" },*/
+  { image: neon,
+    title: "neon"},
   { url: "my-spotify500-app\src\images\carousel-shop.jpg",
     title: "shop" },
   { url: "my-spotify500-app\src\images\carousel-studio.jpg",
@@ -94,7 +100,7 @@ const Carousel =  ({ slides }) => {
       </div>
       <div style={slideStylesWidthBackground}></div>
       <div style={dotsContainerStyles}>
-        {slides.map((slide, slideIndex) => (
+        {slides.map((slides, slideIndex) => (
           <div
             style={dotStyle}
             key={slideIndex}
@@ -107,5 +113,4 @@ const Carousel =  ({ slides }) => {
     </div>
   );
 };
-
-export default Carousel;
+}
