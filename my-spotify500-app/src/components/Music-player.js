@@ -14,7 +14,9 @@ import queue from "../images/layer-group-solid.svg";
 import device from "../images/mobile-screen-button-solid.svg";
 import volume1 from "../images/volume-xmark-solid.svg";
 import full from "../images/up-right-and-down-left-from-center-solid.svg"
-
+/*import pause from "../images/circle-pause-solid.svg";*/
+/*import volume2 from "../images/volume-low-solid.svg";
+import volume3 from "../images/volume-high-solid.svg";*/
 
 export default function MusicPlayer () {
 
