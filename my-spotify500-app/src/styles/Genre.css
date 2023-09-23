@@ -73,3 +73,7 @@
     color: whitesmoke;
     background-color: rgb(74, 13, 74);
 }
+
+.footer--p {
+    padding-bottom: 2em;
+}

@@ -7,7 +7,7 @@
 .decade--header {
     margin: 0px;
     height: 26em;
-    background-color: rgb(87, 15, 87);
+    background-color: rgb(242, 82, 23);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -55,13 +55,16 @@
 }
 
 .decade {
-    background-image: linear-gradient( rgb(74, 13, 74), rgb(20, 20, 20)
+    background-image: linear-gradient( rgba(242, 81, 23, 0.905), rgb(20, 20, 20)
     );
     display: inline-flex;
     flex-wrap: wrap;
     max-width: 80em;  
     padding: .25%;
 
+}
+.footer--p {
+    padding-bottom: 2em;
 }
 /*
 .h2--decade {

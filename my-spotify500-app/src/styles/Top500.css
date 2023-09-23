@@ -6,7 +6,8 @@
 .top500--header {
     margin: 0px;
     height: 26em;
-    background-color: rgb(87, 15, 87);
+    /*background-color: rgb(87, 15, 87);*/
+    background-color: rgb(26, 177, 106);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -55,7 +56,7 @@
 }
 
 .top500 {
-    background-image: linear-gradient( rgb(74, 13, 74), rgb(20, 20, 20)
+    background-image: linear-gradient( rgba(26, 177, 107, 0.904), rgb(20, 20, 20)
     );
     display: inline-flex;
     flex-wrap: wrap;
