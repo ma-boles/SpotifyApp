@@ -5,6 +5,7 @@ import Album from "../components/Album";
 
 export default function Decade () {
     return (
+        <>
         <div className="decade--page">
             <div className="decade--header">
                 <nav className="decade--nav">
@@ -33,7 +34,12 @@ export default function Decade () {
                 <Album />
 
             </div>
+            <hr></hr>
+            <p className="footer--p">&copy; Spotify 2023</p>
+
         </div>
+         
+         </>
         
     )
 }

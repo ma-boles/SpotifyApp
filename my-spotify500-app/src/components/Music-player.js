@@ -63,7 +63,7 @@ export default function MusicPlayer () {
                 <button className="button--player5"><img src={forward} className="forward" alt='skip'></img></button>
                 <button className="button--player6"><img src={arrowRotateForward} className="arrowRotateForward" alt='rewind'></img></button>
                 
-             </aside>
+            </aside>
 
             <aside className="info--right">
                 <button className="button--r-player1"><img src={nowPlayingView} /*onClick={toggle5} */className="player--right1" id="player--right1" alt='now playing'></img></button>

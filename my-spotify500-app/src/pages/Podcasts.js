@@ -5,6 +5,7 @@ import Album from "../components/Album";
 
 export default function Podcasts () {
     return (
+        <>
         <section className="podcasts--page">
             <aside className="div--header">
                 <nav className="podcast--nav">
@@ -34,7 +35,13 @@ export default function Podcasts () {
                 <Album />
 
             </div>
+            <hr></hr>
+            <div className="footer">
+            <p className="footer--p">&copy; Spotify 2023</p>
+
+        </div>
         </section>
         
+        </>
     )
 }

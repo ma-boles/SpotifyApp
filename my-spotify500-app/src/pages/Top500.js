@@ -5,6 +5,7 @@ import Album from "../components/Album";
 
 export default function Top500 () {
     return (
+        <>
         <div className="top500--page">
             <div className="top500--header">
                 <nav className="top500--nav">
@@ -34,7 +35,11 @@ export default function Top500 () {
                 <Album />
 
             </div>
+            <hr></hr>
+            
         </div>
-        
+        <p className="footer--p">&copy; Spotify 2023</p>
+
+        </>
     )
 }

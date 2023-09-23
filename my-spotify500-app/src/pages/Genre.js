@@ -5,6 +5,7 @@ import Album from "../components/Album";
 
 export default function Genre () {
     return (
+        <>
         <div className="genre--page">
             <div className="genre--header">
                 <nav className="genre--nav">
@@ -35,7 +36,13 @@ export default function Genre () {
 
 
             </div>
+            <hr></hr>
+            <div>                    
+            <p className="footer--p">&copy; Spotify 2023</p>
+
+        </div>
         </div>
         
+</>
     )
 }
