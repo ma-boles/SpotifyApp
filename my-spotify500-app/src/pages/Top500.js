@@ -13,11 +13,10 @@ export default function Top500 () {
                 </nav>
                 
                 <h1 className="h1--top500">
-                    Decade
+                    Top500
                 </h1>
 
             </div>
-            <h2 className="h2--top500">...</h2>
 
             <div className="top500">
 

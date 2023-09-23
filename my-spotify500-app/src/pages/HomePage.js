@@ -1,15 +1,18 @@
 import React from "react";
 import Carousel from "../components/Carousel"; 
 import Album from "../components/Album";
+import "../styles/HomePage.css";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
     return(
+        <>
         <section className='homePage'>
-        <div className="home">
-        
-         <Carousel /*slides={slides}*//>
+            <div className="home">
+            
+                <Carousel />
 
-        </div>
+            </div>
 
           <h1 className="h1--home">Top 10</h1>
 
@@ -27,5 +30,11 @@ export default function HomePage() {
           </div>
 
       </section>
+
+      <Link to="../Top500">
+        <h4>See All</h4>
+      </Link>   
+      
+      </>
     )
 }

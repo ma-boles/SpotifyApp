@@ -12,7 +12,7 @@ export default function Genre () {
                     <img src={right} className='genre--arrowRight'></img>
                 </nav>
                 <h1 className="h1--genre">
-                    Podcasts
+                    Genre
                 </h1>
 
             </div>

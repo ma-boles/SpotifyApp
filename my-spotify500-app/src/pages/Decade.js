@@ -16,7 +16,6 @@ export default function Decade () {
                 </h1>
 
             </div>
-            <h2 className="h2--decade">...</h2>
 
             <div className="decade">
 
