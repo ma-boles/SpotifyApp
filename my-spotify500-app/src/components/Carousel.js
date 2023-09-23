@@ -13,7 +13,7 @@ const slideStyles = {
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
-
+/*
 const rightArrowStyles = {
   position: "absolute",
   top: "50%",
@@ -56,7 +56,7 @@ const slides = [
   /*
   { url: "my-spotify500-app\src\images\carousel-neon.jpg",
     title: "neon" },*/
-  { image: neon,
+ /* { image: neon,
     title: "neon"},
   { url: "my-spotify500-app\src\images\carousel-shop.jpg",
     title: "shop" },
@@ -67,7 +67,7 @@ const slides = [
   { url: "my-spotify500-app\src\images\carousel-walkman.jpg",
       title: "walkman"}, 
 ]
-
+*//*
 const Carousel =  ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
@@ -87,9 +87,14 @@ const Carousel =  ({ slides }) => {
     ...slideStyles,
     backgroundImage: `url(${slides[currentIndex].url})`,
   };
-
+*/
   return (
-    <div style={sliderStyles}>
+    <>
+    <img src={neon} style={slideStyles}></img>
+    
+</>
+)}
+/*<div style={sliderStyles}>
       <div>
         <div onClick={goToPrevious} style={leftArrowStyles} className="arrow--prev">
           ❰
@@ -112,5 +117,4 @@ const Carousel =  ({ slides }) => {
       </div>
     </div>
   );
-};
-}
+};*/

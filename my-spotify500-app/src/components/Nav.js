@@ -32,19 +32,19 @@ export default function Nav() {
                 <ul className='ul--bottom'>
 
                     <div className='line--item'>
-                        <Link to="/pages/Top500">
+                        <Link to="./Top500">
                             <img src={library} className='img--icon' alt='Top 500'></img><li>Top 500</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
-                        <Link to="/pages/Genre">
+                        <Link to="./Genre">
                             <img src={genre} className='img--icon' alt='genre'></img><li>Genre</li>
                         </Link>  
                     </div>
 
                     <div className='line--item'>
-                        <Link to="/pages/Decade">
+                        <Link to="./Decade">
                             <img src={decade} className='img--icon' alt='decade'></img><li>Decade</li>
                         </Link>
                     </div>
@@ -54,7 +54,7 @@ export default function Nav() {
                     </div>
 
                     <div className='line--item'>
-                        <Link to="/pages/Podcasts"> 
+                        <Link to="./Podcasts"> 
                             <img src={podcast} className='img--icon' alt='podcast'></img><li>Podcast</li>
                         </Link>  
                     </div>
