@@ -1,11 +1,11 @@
 .card--album {
     background-color: rgb(29, 29, 29);
-    width: 16em;
-    height: 22.5em;
+    width: 13em;
+    height: 18.5em;
     margin-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3em;
+    margin-top: 2em;
     border-radius: 10px;
 }
 

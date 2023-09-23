@@ -13,4 +13,5 @@ code {
 }
 #root {
   width: 100%;
+  overflow: hidden;
 }

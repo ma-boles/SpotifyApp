@@ -1,10 +1,8 @@
 .podcasts--page {
-    overflow: auto;
     flex-wrap: wrap;
     border-radius: 10px;
     max-height: 42em;
 }
-
 
 .div--header {
     margin: 0px;
@@ -12,7 +10,6 @@
     background-color: rgb(87, 15, 87);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
 }
 
 .podcast--nav {
@@ -23,6 +20,7 @@
     border-top-right-radius: 10px;
     margin-bottom: 0px;
     position: fixed;
+    display: flex;
 }
 
 .podcast--arrowLeft{
@@ -34,7 +32,6 @@
     border-radius: 180px;
     background-color: rgb(194, 194, 194);
     filter: invert(1);
-
 }
 .podcast--arrowRight {
     height: 1.5em;
@@ -54,20 +51,22 @@
     color: whitesmoke;
     font-size: 6.5em;
     padding-top: 2.25em;
+    text-align: left;
 }
 
 .podcasts {
     background-image: linear-gradient( rgb(74, 13, 74), rgb(20, 20, 20)
     );
-    height: 14em;
     display: inline-flex;
     flex-wrap: wrap;
-    max-width: 80em;
+    max-width: 80em;    
+    padding: .25%;
 
-    
 }
 
 .h2--podcasts {
+    text-align: left;
+
     margin: 0;
     padding-top: .5em;
     text-indent: 30px;
