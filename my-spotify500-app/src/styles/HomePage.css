@@ -25,6 +25,7 @@ font-weight: 500;
 }
 
 hr {
-    width: 90%;
+    width: 94%;
     margin-top: 5em;
+    filter: invert(1);
 }

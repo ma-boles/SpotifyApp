@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  height: 85vh;
+  height: 84.5vh;
   display: flex;
 }
 /*.App-header {
@@ -23,7 +23,7 @@ body {
   background-color: black;
   margin: .5em;
   display: flex;
-  overflow: none;
+  
 }
 
 .home--container {
@@ -149,7 +149,7 @@ a {
 .footer--p {
   color: whitesmoke;
   text-align: right;
-  margin-right: 2%;
+  margin-right: 3%;
 }
 /*3rd column*/
 
