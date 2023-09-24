@@ -38,7 +38,7 @@ export default function Genre () {
             </div>
             <hr></hr>
             <div>                    
-            <p className="footer--p">&copy; Spotify 2023</p>
+            <p className="footer--p">&copy; mab.dev 2023</p>
 
         </div>
         </div>

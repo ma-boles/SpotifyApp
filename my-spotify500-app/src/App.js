@@ -7,6 +7,7 @@ import Decade from "../src/pages/Decade";
 import Genre from "../src/pages/Genre";
 import Podcasts from "../src/pages/Podcasts";
 import HomePage from './pages/HomePage';
+import Search from './pages/Search';
 
 import MusicPlayer from './components/Music-player';
 import Nav from './components/Nav';
@@ -33,6 +34,7 @@ export default function App() {
             <Route path='/Top500' element={<Top500 />} />
             <Route path='/Genre' element={<Genre />} />
             <Route path='/Podcasts' element={<Podcasts />} />
+            <Route path='/Search' element={<Search />}/>
           </Routes>
       </div>
       <NowPlaying />

@@ -37,7 +37,7 @@ export default function Podcasts () {
             </div>
             <hr></hr>
             <div className="footer">
-            <p className="footer--p">&copy; Spotify 2023</p>
+            <p className="footer--p">&copy; mab.dev 2023</p>
 
         </div>
         </section>

@@ -25,7 +25,9 @@ export default function Nav() {
                     </div>
 
                     <div className='line--item'>
+                        <Link to="./Search">
                     <img src={search} className='img--icon' alt='search'></img><li>Search</li>
+                        </Link>
                     </div>
                 </ul>
                 
