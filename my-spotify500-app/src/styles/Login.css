@@ -1,0 +1,12 @@
+/*log in page */
+
+.login {
+display: flex;
+align-items: center;
+}
+.logo--green {
+    width: 50rem;
+    margin-top: 15%;
+}
+
+/* log in card */
