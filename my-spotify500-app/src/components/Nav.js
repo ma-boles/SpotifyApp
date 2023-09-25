@@ -52,7 +52,9 @@ export default function Nav() {
                     </div>
 
                     <div className='line--item'>
+                        <Link to="./Login">
                     <img src={artist} className='img--icon' alt='artist'></img><li>Artist</li>
+                        </Link>
                     </div>
 
                     <div className='line--item'>
