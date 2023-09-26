@@ -1,4 +1,4 @@
-import '../src/styles/App.css';
+/*import '../src/styles/App.css';
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
 
@@ -20,7 +20,7 @@ import left from "../images/chevron-left-solid.svg"*/
 /*import album from "../images/album-placeholder.png";*/
 
 
-export default function App() {
+/*export default function App() {
   return (
     <>
     <div className="App">
@@ -28,7 +28,7 @@ export default function App() {
           <Nav />
       
       <div className='home--container'>
-        {/* new page loads */}
+        {/* new page loads *//*}
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/Decade' element={<Decade />} />
@@ -50,4 +50,19 @@ export default function App() {
     );
   }
 
-   
+   */
+import React from "react";
+import Login from "./components/Login";
+import "./styles/App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import LoginCard from "./components/LoginCard";
+
+
+export default function App() {
+    return(
+        <>
+{            /*<Login />*/
+}            <LoginCard />
+        </>
+    )
+}

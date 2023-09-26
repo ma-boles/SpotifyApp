@@ -1,12 +1,69 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+
+}
 /*log in page */
 
 .login {
-display: flex;
-align-items: center;
+text-align: center;
 }
 .logo--green {
     width: 50rem;
-    margin-top: 15%;
+    margin-top: 20%;
 }
 
 /* log in card */
+.login--card {
+    width: 30%;
+    height: 85%;
+    background-color: #191414;
+    border: white double 2px;
+    border-radius: 20px;
+    text-align: center;
+    color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+.login--img {
+    width: 15rem;
+    margin-top: 10%;
+}
+input {
+    text-indent: 5px;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 10px;
+    width: 70%;
+    background-color: rgb(46, 46, 46);
+    color: whitesmoke;
+    font-size: .8rem;
+}
+
+.div--remember {
+    display: flex;
+    margin-left: 13%;
+}
+#radio {
+    width: 1rem;
+    margin-left: 50%;
+}
+
+button {
+    background-color: #1db954;
+    padding: 2.5%;
+    border-radius: 20px;
+    width: 73%;
+    margin: 2%;
+    cursor: pointer;
+    font-weight: bolder;
+}
+p {
+    margin-bottom: 7%;
+}
+
+hr {
+    filter: invert(1);
+    width: 85%;
+}
