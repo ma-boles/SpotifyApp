@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "../images/Spotify_Logo_RGB_White.png"
-
+import Logo from "../images/Spotify_Logo_RGB_White.png";
+import { Link } from "react-router-dom";
 
 export default function LoginCard() {
     return(
@@ -16,7 +16,11 @@ export default function LoginCard() {
         </div>
         
         <div className="div--button">
+
+            <Link to="/">
             <button>LOG IN</button>
+            </Link>
+            
             <hr/>
             <button>LOG IN WITH FACEBOOK</button>
             <p>DON'T HAVE AN ACCOUNT? <strong>SIGNUP</strong></p>
