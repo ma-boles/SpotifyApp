@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../styles/Carousel.css";
+import HeaderImg from "../images/RS-header.jpg";
+import neon from "../images/carousel-neon.jpg";
 
-import neon from "../images/carousel-neon.jpg"
 
 
 export default function Carousel( ) {
@@ -90,7 +91,7 @@ const Carousel =  ({ slides }) => {
 */
   return (
     <>
-    <img src={neon} style={slideStyles}></img>
+    <img src={HeaderImg} style={slideStyles}></img>
     
 </>
 )}
