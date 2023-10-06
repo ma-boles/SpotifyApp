@@ -34,8 +34,9 @@ export default function HomePage() {
       <Link to="../Top500">
         <h4>See All</h4>
       </Link>   
+      
       <hr></hr>
-      <p className="footer--p">&copy; mab.dev 2023</p>
+      <p className="footer--p">&copy; 2023 mab.dev</p>
 
       </>
     )

@@ -14,9 +14,9 @@
 
 /*left-section*/
 .info--album {
-    width: 20em;
     background-color: black;
     display: flex;
+    width: 18rem;
 }
 .placeholder-2 {
     height: 3.5em;
@@ -68,7 +68,7 @@
     border: none;
     width: 2em;
     height: 1.5em;
-    margin-left: 6em;
+    margin-left: 17%;
     margin-top: 2em;
     cursor: pointer;
 }
@@ -99,11 +99,13 @@
     background-color: black;
     flex: 1;
     text-align: center;
+    display: flex;
+    padding-left: 17rem;
+    padding-right: 17rem;
 }
 .pause, .play {   
     filter: invert(.6);
     height: 2.5em;
-    margin-top: 1.3em;
 }
 .pause:hover, .play:hover {
     color: white;
@@ -151,7 +153,6 @@
     filter: invert(1);
 }
 
-
 .button--player1 {
     border: none;
     width: 1.5em;
@@ -195,6 +196,8 @@
 .info--right {
     width: 19.5em;
     background-color: black;
+    display: flex;
+    margin: 1em;
 }
 .player--right1 {
     filter: invert(.6);
@@ -266,6 +269,5 @@
     background-color: black;
     border: none;
     height: 2.5em;
-    margin-top: 1.5em;
-    margin-left: 9em;
+    margin-left: 35%;
 }
