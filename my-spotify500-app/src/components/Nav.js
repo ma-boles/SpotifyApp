@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/App.css"
 
 import home from "../images/house-solid.svg";
 import search from "../images/magnifying-glass-solid.svg";

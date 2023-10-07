@@ -229,8 +229,76 @@ a {
 }
 
 @media screen and (max-width:425px) {  
+  .App{
+    width: 100%;
+    display: inline-block;
+
+  }
   .side {
+    width: 100%;  
+    height: 10%;
+    display: inline-block;
+
+  }
+  nav {
+      background-color: transparent;
+      width: 100%;
+      height: 3em;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      display: flex;
+    }
+   
+  .ul--top{
+      padding: 0px;
+      margin: 0px;
+      height: 100%;
+      width: 13em;
+      background-color: transparent;
+      display: flex;
+    }
+
+  .ul--bottom {
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      width: 35em;
+      display: flex;
+      background-color: transparent;
+    }
+
+    .line--item {
+      background-color: rgb(20, 20, 20);
+      margin-left: 3px;
+      margin-right: 3px;
+      margin-top: 13px;
+      border-radius: 15px;
+      height: 2.5em;
+      width: 15em;
+    }
+    .ul--top > .line--item > a > li {
+      color: whitesmoke;
+      margin: auto 12px;
+      display: block;
+    }
+  
+    .ul--bottom > .line--item > a > li {
+      color: whitesmoke;
+      margin-left: 11px;
+      display: block;
+    }
+    .line--item > a > img {
+      display: none
+      };
+   
+  .nowPlaying {
     display: none;
   }
- 
+  .nowPlaying--top {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+   
 }
