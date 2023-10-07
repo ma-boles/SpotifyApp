@@ -271,3 +271,30 @@
     height: 2.5em;
     margin-left: 35%;
 }
+
+@media screen and (max-width: 1024px) {
+    /* left side */
+    .h3--info--album {
+        width: 5rem;
+      }
+      .button--plus {
+        margin-left: 0px;
+      }
+
+    /* middle */
+    .player{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+    /* right */
+    .info--right {
+        margin-right: 30px;
+        width: 16.5em;
+
+    }
+}
+/*
+@media screen and (max-width: 425px) {
+    
+}*/

@@ -30,3 +30,11 @@ hr {
     margin-top: 5em;
     filter: invert(1);
 }
+
+/* mobile screens */
+
+@media screen and (max-width: 425px) {
+    .homePage {
+        background-color: transparent;
+    }
+}

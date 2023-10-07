@@ -86,6 +86,8 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
+
+
 /*middle column*/
 
 .home--container {
@@ -195,4 +197,40 @@ a {
   width: 22em;
   border-radius: 10px;
   margin: .2em;
+}
+
+/* tablet screen */
+
+@media screen and (max-width: 1024px) {
+  /* nav */
+  .side{
+      width: 5em;
+  }
+  .ul--top {
+    width: 10%;
+  }
+  .ul--top > .line--item > a > li {
+    display: none
+  }
+  
+  .ul--bottom {
+    width: 10%;
+  }
+  .ul--bottom > .line--item > a > li {
+    display: none
+  }
+
+  /* middle container */
+  .home--container {
+    margin: 0px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width:425px) {  
+  .side {
+    display: none;
+  }
+ 
 }
