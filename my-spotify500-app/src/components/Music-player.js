@@ -20,7 +20,7 @@ import volume3 from "../images/volume-high-solid.svg";*/
 
 export default function MusicPlayer () {
 
-    function nowPlayViewToggle () {
+    /*function nowPlayViewToggle () {
 
         var arrow = document.getElementById("up-down");
   
@@ -37,8 +37,54 @@ export default function MusicPlayer () {
         } else {
         nowPlay.style.display = "none"
         }
-      }
+      }*/
 
+      /*function nowPlayViewToggle() {
+        var arrow = document.getElementById("up-down");
+        var nowPlay = document.getElementById("nowPlaying");
+    
+        // Check the initial state of the arrow element
+        var arrowTransform = window.getComputedStyle(arrow).getPropertyValue("transform");
+        if (arrowTransform === "none" || arrowTransform === "matrix(1, 0, 0, 1, 0, 0)") {
+            arrow.style.transform = "rotate(180deg)";
+        } else {
+            arrow.style.transform = "none";
+        }
+    
+        // Check the initial state of the nowPlaying element
+        var nowPlayDisplay = window.getComputedStyle(nowPlay).getPropertyValue("display");
+        if (nowPlayDisplay === "none") {
+            nowPlay.style.display = "block";
+        } else {
+            nowPlay.style.display = "none";
+        }
+    }*/
+    
+    // nowPlaying hidden on small screen
+    // doesnt close on 2nd tap
+    function nowPlayViewToggle() {
+        var arrow = document.getElementById("up-down");
+        var nowPlay = document.getElementById("nowPlaying");
+    
+        // Check the screen width
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    
+        if (screenWidth <= 425) {
+            nowPlay.style.display = "none";
+        } else {
+            nowPlay.style.display = "block";
+        }
+    
+        // Rotate the arrow element
+        var arrowTransform = window.getComputedStyle(arrow).getPropertyValue("transform");
+        if (arrowTransform === "none" || arrowTransform === "matrix(1, 0, 0, 1, 0, 0)") {
+            arrow.style.transform = "rotate(180deg)";
+        } else {
+            arrow.style.transform = "none";
+        }
+    }
+    
+    
     return (
         <>
         <section className="musicPlayer">

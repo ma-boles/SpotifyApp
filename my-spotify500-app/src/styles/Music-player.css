@@ -294,7 +294,9 @@
 
     }
 }
-/*
+
 @media screen and (max-width: 425px) {
-    
-}*/
+    .musicPlayer {
+        margin: 0px;
+    }
+}
