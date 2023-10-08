@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import Search from './pages/Search';
 import Login from './pages/LoginPage';
 
+
 import MusicPlayer from './components/Music-player';
 import Nav from './components/Nav';
 import NowPlaying from './components/NowPlaying';
