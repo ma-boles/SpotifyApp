@@ -4,11 +4,28 @@ import album from "../images/album-placeholder.png"
 export default function Album () {
 
     const styles = {
-        width: 175,
-        height: 175,
-        margin: 15,
-        borderRadius: 10
+        width: "175px",
+        height: "175px",
+        margin: "15px",
+        borderRadius: "10px"
     }
+
+     // Determine the window width dynamically
+     const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    
+     // Modify the styles object based on the window width
+     if (windowWidth <= 425) {
+         styles.width = '125px';
+         styles.height = '125px';
+         styles.margin = '13px';
+     }
+
+     if (windowWidth <= 320) {
+        styles.width = '100px';
+        styles.height = '100px';
+        styles.margin = '10px';
+    }
+    
     return (
         
         <div className="card--album">
