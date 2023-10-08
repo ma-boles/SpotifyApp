@@ -78,3 +78,40 @@
 .footer--p {
     padding-bottom: 2em;
 }
+@media screen and (max-width: 425px) {
+    .genre--header {
+        height: 16em; 
+    }
+    .h1--genre {
+        font-size: 4em;
+    }
+    .h2--genre {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .genre--header {
+        height: 12em;
+    }
+    .h1--genre {
+        font-size: 3em;
+    }
+    .h2--genre {
+        font-size: 1.3em;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+    .genre--header {
+        height: 8em;
+    }
+    .h1--genre {
+        font-size: 2em;
+    }
+    .h2--genre {
+        font-size: 1.2em;
+    }
+    
+}

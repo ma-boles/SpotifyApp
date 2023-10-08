@@ -6,7 +6,6 @@
 .top500--header {
     margin: 0px;
     height: 26em;
-    /*background-color: rgb(87, 15, 87);*/
     background-color: rgb(26, 177, 106);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -52,7 +51,6 @@
     font-size: 6.5em;
     padding-top: 2.25em;
     text-align: left;
-
 }
 
 .top500 {
@@ -64,3 +62,29 @@
     padding: .25%;
 }
 
+@media screen and (max-width: 425px) {
+    .top500--header {
+        height: 16em;
+    }
+
+    .h1--top500 {
+        font-size: 4em;
+    }
+}
+@media screen and (max-width: 375px) {
+    .top500--header {
+        height: 12em;
+    }
+
+    .h1--top500 {
+        font-size: 3em;
+    }
+}
+@media screen and (max-width: 320px) {
+    .top500--header {
+        height: 8em;
+    }
+    .h1--top500 {
+        font-size: 2em;
+    }
+}

@@ -66,3 +66,29 @@
 .footer--p {
     padding-bottom: 2em;
 }
+
+@media screen and (max-width:425px) {
+    .decade--header {
+        height: 16em;
+    }
+    .h1--decade {
+        font-size: 4em;
+        
+    }
+}
+@media screen and (max-width: 375px) {
+    .decade--header {
+        height: 12em;
+    }
+    .h1--decade {
+        font-size: 3em;
+    }
+}
+@media screen and (max-width: 320px) {
+    .decade--header {
+        height: 8em;
+    }
+    .h1--decade {
+        font-size: 2em;
+    }
+}

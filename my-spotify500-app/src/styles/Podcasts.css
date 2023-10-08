@@ -77,3 +77,37 @@
 .footer--p {
     padding-bottom: 2em;
 }
+
+@media screen and (max-width:425px) {
+    .div--header {
+        height: 16em;
+    }
+    .h1--podcasts {
+        font-size: 4em;
+    }
+    .h2--podcasts {
+        font-size: 1.7em;
+    }
+}
+@media screen and (max-width: 375px) {
+    .div--header {
+        height: 12em;
+    }
+    .h1--podcasts {
+        font-size: 3em;
+    }
+    .h2--podcasts {
+        font-size: 1.5em;
+    }
+}
+@media  screen and (max-width: 320px) {
+    .div--header {
+        height: 8em;
+    }
+    .h1--podcasts {
+        font-size: 2em;
+    }
+    .h2--podcasts {
+        font-size: 1.3em;
+    }
+}
