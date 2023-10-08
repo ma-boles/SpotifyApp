@@ -240,6 +240,13 @@ a {
     display: inline-block;
 
   }
+  .home--container {
+    height: 32.5em;
+  }
+  .nowPlaying {
+    display: none;
+    
+  }
   nav {
       background-color: transparent;
       width: 100%;
@@ -248,7 +255,7 @@ a {
       overflow-y: hidden;
       display: flex;
     }
-   
+    
   .ul--top{
       padding: 0px;
       margin: 0px;
@@ -291,12 +298,9 @@ a {
       display: none
       };
    
-  .nowPlaying {
-    display: none;
-  }
-  .nowPlaying--top {
-    display: none;
-  }
+  
+  
+  
 }
 
 @media screen and (max-width: 375px) {
