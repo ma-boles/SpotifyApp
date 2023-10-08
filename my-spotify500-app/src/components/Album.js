@@ -15,14 +15,14 @@ export default function Album () {
     
      // Modify the styles object based on the window width
      if (windowWidth <= 425) {
-         styles.width = '125px';
-         styles.height = '125px';
+         styles.width = '100px';
+         styles.height = '100px';
          styles.margin = '13px';
      }
 
      if (windowWidth <= 320) {
-        styles.width = '100px';
-        styles.height = '100px';
+        styles.width = '80px';
+        styles.height = '80px';
         styles.margin = '10px';
     }
     
