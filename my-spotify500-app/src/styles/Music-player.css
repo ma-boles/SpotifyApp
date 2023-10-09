@@ -1,6 +1,5 @@
 :root {
     --spotify-green: filter: invert(1) contrast(40%) sepia(9) hue-rotate(100deg) saturate(1000%);
-
 }
 
 .musicPlayer {
@@ -14,7 +13,7 @@
 
 /*left-section*/
 .info--album {
-    background-color: black;
+    background-color: transparent;
     display: flex;
     width: 18rem;
 }
@@ -96,12 +95,12 @@
 
 /*middle-section*/
 .player {
-    background-color: black;
+    background-color: transparent;
     flex: 1;
     text-align: center;
     display: flex;
-    padding-left: 17rem;
-    padding-right: 17rem;
+    padding-left: 17%;
+    padding-right: 17%;
 }
 .pause, .play {   
     filter: invert(.6);
@@ -195,7 +194,7 @@
 /*right-section*/
 .info--right {
     width: 19.5em;
-    background-color: black;
+    background-color: transparent;
     display: flex;
     margin: 1em;
 }
@@ -272,6 +271,13 @@
     margin-left: 35%;
 }
 
+@media screen and (max-width: 1235px) {
+    .player {
+        padding-right: 10%;
+        padding-left: 10%;
+
+    }
+}
 @media screen and (max-width: 1024px) {
     /* left side */
     .h3--info--album {
@@ -283,8 +289,8 @@
 
     /* middle */
     .player{
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 6%;
+        padding-right: 6%;
     }
     
     /* right */
@@ -297,6 +303,36 @@
 
 @media screen and (max-width: 425px) {
     .musicPlayer {
-        margin: 0px;
+        background-color: black;
+        height: 3em;
+        border-radius: 5px;
+    }
+    .placeholder-2 {
+        height: 2.5em;
+        width: 2.5em;
+        margin-left: .3em;
+        margin-top: .1em;
+    }
+    .info--album2 {
+        margin-left: 10px;
+    }
+    .h3--info--album {
+        margin-top: 3px;
+    }
+    .up-down,
+    .button--pic,
+    .button--plus,
+    .button--player1,
+    .button--player2,
+    .button--player5,
+    .button--player6 {
+        display: none;
+    }
+    .button--player4 {
+        margin-left: 4em;
+        margin-right: 0em;
+    }
+    .info--right {
+        display: none;
     }
 }
