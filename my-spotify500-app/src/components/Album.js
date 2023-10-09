@@ -30,8 +30,10 @@ export default function Album () {
         
         <div className="card--album">
             <img style={styles} src={album} classname="album--cover" ></img>
-            <h2 className="album--h2">Album</h2>
-            <h3 className="album--h3">Year・Artist</h3>
+            <div className="album--info">
+                <h2 className="album--h2">Album</h2>
+                <h3 className="album--h3">Year・Artist</h3>
+            </div>
         </div>
         )
 }

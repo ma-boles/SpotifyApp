@@ -33,6 +33,10 @@
         margin-top: 7px;
         display: flex;
     }
+    .album--info {
+        text-align: left;
+        padding: 2rem 0rem;
+    }
     .album--h2 {
         font-size: 1.3rem;
     }
@@ -42,6 +46,7 @@
     }
 }
 @media screen and (max-width: 375px) {
+    
     .album--h2 {
         font-size: 1.2rem;
     }
@@ -52,6 +57,9 @@
 @media screen and (max-width:320px) {
     .card--album {
         height: 6.5em;
+    }
+    .album--info {
+        padding: 1.7rem 0rem;
     }
     .album--h2 {
         font-size: 1.1rem;
