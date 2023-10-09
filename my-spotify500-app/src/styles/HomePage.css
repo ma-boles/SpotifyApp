@@ -1,7 +1,5 @@
 
 .homePage {
-  /*background-image: linear-gradient( rgb(237, 27, 36), rgb(20, 20, 20)
-    );*/
     background-image: linear-gradient( rgb(225, 0, 11), rgb(20, 20, 20)
     );
 }
@@ -36,5 +34,18 @@ hr {
 @media screen and (max-width: 425px) {
     .homePage {
         background-color: transparent;
+    }
+    .h1--home {
+        font-size : 2rem
+    }
+}
+@media screen and (max-width: 375px) {
+    .h1--home {
+        font-size: 1.7rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    .h1--home {
+        font-size: 1.5rem;
     }
 }
