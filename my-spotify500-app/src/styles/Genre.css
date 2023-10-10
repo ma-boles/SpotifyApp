@@ -79,6 +79,9 @@
     padding-bottom: 2em;
 }
 @media screen and (max-width: 425px) {
+    .genre--nav {
+        display: none;
+    }
     .genre--header {
         height: 16em; 
     }

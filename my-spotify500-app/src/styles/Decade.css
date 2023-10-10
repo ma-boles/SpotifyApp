@@ -68,6 +68,9 @@
 }
 
 @media screen and (max-width:425px) {
+    .decade--nav {
+        display: none;
+    }
     .decade--header {
         height: 16em;
     }

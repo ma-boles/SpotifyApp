@@ -79,6 +79,9 @@
 }
 
 @media screen and (max-width:425px) {
+    .podcast--nav {
+        display: none;
+    }
     .div--header {
         height: 16em;
     }

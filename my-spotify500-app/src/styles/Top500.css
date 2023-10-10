@@ -63,6 +63,9 @@
 }
 
 @media screen and (max-width: 425px) {
+    .top500--nav {
+        display: none;
+    }
     .top500--header {
         height: 16em;
     }
