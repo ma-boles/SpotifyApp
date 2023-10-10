@@ -67,6 +67,28 @@ export default function Nav() {
         
             </nav>
         </side>
+        <div className="mobile-nav--bottom">
+            <ul className='ul--mobile--bottom'>
+
+                <div className='mobile--line--item'>
+                    <Link to="/" >
+                        <button className="mobile--button">
+                            <img src={home} className='mobile--img--icon' alt='home'></img>
+                            <li className="mobile--li">Home</li>   
+                        </button>
+                    </Link>
+                </div>
+
+                <div className='mobile--line--item'>
+                    <Link to="./Search">
+                        <button className="mobile--button">
+                            <img src={search} className='mobile--img--icon' alt='search'></img>
+                            <li className="mobile--li">Search</li>
+                        </button>
+                    </Link>
+                </div>
+            </ul>
+        </div>
      </>
     )
 }
