@@ -43,9 +43,9 @@ export default function App() {
 
     </div>
 
-    <section className='musicPlayer'>
+    
       <MusicPlayer />
-    </section>
+    
     </>
     );
   }
