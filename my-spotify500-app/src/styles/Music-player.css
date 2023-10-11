@@ -8,12 +8,14 @@
     height: 5em;
     display: flex;
     margin-top: .3em;
+    position: fixed;
+    
 }
 
 
 /*left-section*/
 .info--album {
-    background-color: transparent;
+    background-color: black;
     display: flex;
     width: 18rem;
 }
@@ -95,7 +97,7 @@
 
 /*middle-section*/
 .player {
-    background-color: transparent;
+    background-color: black;
     flex: 1;
     text-align: center;
     display: flex;
@@ -194,7 +196,7 @@
 /*right-section*/
 .info--right {
     width: 19.5em;
-    background-color: transparent;
+    background-color: black;
     display: flex;
     margin: 1em;
 }
