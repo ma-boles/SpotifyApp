@@ -282,6 +282,7 @@ a {
       width: 35em;
       display: flex;
       background-color: transparent;
+      
     }
 
     .mobile--nav--bottom {
@@ -297,7 +298,7 @@ a {
       padding: 0px;
       margin: 0px;
       height: 3.5em;
-      background-color: transparent;
+      background-color: black;
       justify-content: space-around;
      }
 
@@ -309,7 +310,6 @@ a {
       border-radius: 0px;
       margin-top: 5px;
       z-index: 10;
-
     }
 
     .mobile--line--item {
@@ -337,7 +337,7 @@ a {
       height: 2.5em;
       width: 15em;
     }
-
+    
     .ul--top > .line--item > a > li {
       color: whitesmoke;
       margin: auto 12px;
@@ -346,9 +346,10 @@ a {
   
     .ul--bottom > .line--item > a > li {
       color: whitesmoke;
-      margin-left: 11px;
       display: block;
+      margin-top: 1px;
     }
+
     .line--item > a > img {
       display: none
       };  
