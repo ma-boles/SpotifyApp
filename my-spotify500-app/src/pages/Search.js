@@ -8,6 +8,11 @@ export default function Search() {
     return (
         <>
         <section className="search">
+
+            <div className="search--mobile--div">
+                <h2 className="search--mobile--h2">Search</h2>
+                <button className="search--mobile--input">"What do you want to listen to?"</button>
+            </div>
             <nav className="search--nav">
                     <img src={left} className='search--arrowLeft'></img>
                     <img src={right} className='search--arrowRight'></img>

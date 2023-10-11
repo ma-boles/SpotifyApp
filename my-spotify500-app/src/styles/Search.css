@@ -1,3 +1,4 @@
+ 
 p {
     color: whitesmoke;
 }
@@ -13,7 +14,8 @@ p {
 
 
 .search--nav {
-    background-color: rgba(0, 0, 0, 0.185);
+    /*background-color: rgba(0, 0, 0, 0.185);*/
+    background-color: black;
     width: 100%;
     height: 5em;
     border-top-left-radius: 10px;
@@ -80,4 +82,57 @@ p {
     color: whitesmoke;
     text-align: left;
     margin-left: 2%;
+}
+
+@media screen and (max-width: 425px) {
+    .side {
+        display: none;
+    }
+    .search--nav {
+        display: none;
+    }
+    .search--header {
+        display: none;
+    }
+    .search--mobile--div {
+        text-align: left;
+    }
+    .search--mobile--h2 {
+        color: whitesmoke;
+        background-color: transparent;
+        margin-left: 12px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .search--mobile--input {
+        background-color: white;
+        width: 98%;
+        font-size: .8rem;
+        color: black;
+        border-radius: 7px;
+        text-align: left;
+        margin-top:5px;
+        margin-right: 0px;
+        margin-left: 4px;
+    }
+    .search--arrowLeft,
+    .search--arrowRight {
+        display: none;
+    }
+    .search--recent {
+        display: none;
+    }
+
+    .search--input {
+        border-radius: 10px;
+        border: none;
+        height: 2em;
+        width: 22em;
+        text-indent: 20px;
+        color: whitesmoke;
+        background-color: rgb(55, 55, 55);
+        position: absolute;
+        top: 0px;
+        display: none;
+    }
 }
