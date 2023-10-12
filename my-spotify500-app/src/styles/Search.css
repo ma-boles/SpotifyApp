@@ -85,9 +85,9 @@ p {
 }
 
 @media screen and (max-width: 425px) {
-    .side {
+    /*.side {
         display: none;
-    }
+    }*/
     .search--nav {
         display: none;
     }
