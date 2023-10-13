@@ -51,7 +51,7 @@ export default function Search() {
             <hr></hr>
 
         </section>
-        <p className="footer--p">&copy; mab.dev 2023</p>
+        <p className="footer--p">&copy; 2023 mab.dev</p>
 
         </>
     )
