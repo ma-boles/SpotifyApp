@@ -9,6 +9,7 @@ import Podcasts from "../src/pages/Podcasts";
 import HomePage from './pages/HomePage';
 import Search from './pages/Search';
 import Login from './pages/LoginPage';
+import MobileSearch from './pages/MobileSearch';
 
 
 import MusicPlayer from './components/Music-player';
@@ -37,6 +38,7 @@ export default function App() {
             <Route path='/Podcasts' element={<Podcasts />} />
             <Route path='/Search' element={<Search />}/>
             <Route path='/' element={<Login />} />
+            <Route path='/MobileSearch' element={<MobileSearch/>}/>
           </Routes>
       </div>
       <NowPlaying />
