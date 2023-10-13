@@ -33,16 +33,12 @@ export default function Genre () {
                 <Album />
                 <Album />                
                 <Album />
-
-
             </div>
+            
             <hr></hr>
-            <div>                    
-            <p className="footer--p">&copy; mab.dev 2023</p>
 
         </div>
-        </div>
-        
+            <p className="footer--p">&copy; 2023 mab.dev</p>
 </>
     )
 }

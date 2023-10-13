@@ -1,7 +1,6 @@
 .genre--page {
     flex-wrap: wrap;
     border-radius: 10px;
-    max-height: 42em;
 }
 
 .genre--header {

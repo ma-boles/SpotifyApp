@@ -36,11 +36,10 @@ export default function Podcasts () {
 
             </div>
             <hr></hr>
-            <div className="footer">
-            <p className="footer--p">&copy; mab.dev 2023</p>
 
-        </div>
         </section>
+        <p className="footer--p">&copy; 2023 mab.dev</p>
+
         
         </>
     )

@@ -35,10 +35,10 @@ export default function Decade () {
 
             </div>
             <hr></hr>
-            <p className="footer--p">&copy; mab.dev 2023</p>
 
         </div>
-         
+        <p className="footer--p">&copy; 2023 mab.dev </p>
+
          </>
         
     )
