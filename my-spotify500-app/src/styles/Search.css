@@ -104,6 +104,9 @@ p {
         margin-top: 10px;
         margin-bottom: 0px;
     }
+    .link--mobileSearch {
+        width: 100%;
+    }
     .search--mobile--input {
         background-color: white;
         width: 98%;
@@ -113,7 +116,7 @@ p {
         text-align: left;
         margin-top:5px;
         margin-right: 0px;
-        margin-left: 4px;
+        margin-left: 5px;
     }
     .search--arrowLeft,
     .search--arrowRight {
@@ -134,5 +137,47 @@ p {
         position: absolute;
         top: 0px;
         display: none;
+    }
+
+    /* mobilesSearch*/
+    .search--line {
+        display: flex;
+    }
+    .search--line--input {
+        width: 77%;
+        font-size: .9rem;
+    }
+    .button--search {
+        background-color: transparent;
+        border:none;
+        color: whitesmoke;
+        width: 3rem;
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    .h3--mobileSearch {
+        color: whitesmoke;
+    }
+    .info--mobileSearch {
+        width: 60%;
+        margin: auto;
+        margin-top: 8rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .search--line--input {
+        width: 75%;
+        font-size: .85rem;
+
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search--line--input {
+        width: 70%;
+
     }
 }
