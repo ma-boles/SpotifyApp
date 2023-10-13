@@ -282,9 +282,22 @@ a {
       width: 35em;
       display: flex;
       background-color: transparent;
-      
     }
-
+    #top500{
+      margin-left: 13px;
+    }
+    #genre {
+      margin-left: 20px;
+    }
+    #decade{
+      margin-left: 16px;
+    }
+    #artist{
+      margin-left: 21px;
+    }
+    #podcast{
+      margin-left: 14px;
+    }
     .mobile--nav--bottom {
       display: flex;
     }
