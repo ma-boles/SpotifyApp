@@ -36,31 +36,31 @@ export default function Nav() {
 
                     <div className='line--item'>
                         <Link to="./Top500">
-                            <img src={library} className='img--icon' alt='Top 500'></img><li>Top 500</li>
+                            <img src={library} className='img--icon' alt='Top 500'></img><li id='top500'>Top 500</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Genre">
-                            <img src={genre} className='img--icon' alt='genre'></img><li>Genre</li>
+                            <img src={genre} className='img--icon'alt='genre'></img><li id='genre'>Genre</li>
                         </Link>  
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Decade">
-                            <img src={decade} className='img--icon' alt='decade'></img><li>Decade</li>
+                            <img src={decade} className='img--icon'alt='decade'></img><li id='decade'>Decade</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Login">
-                    <img src={artist} className='img--icon' alt='artist'></img><li>Artist</li>
+                    <img src={artist} className='img--icon'alt='artist'></img><li id='artist'>Artist</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Podcasts"> 
-                            <img src={podcast} className='img--icon' alt='podcast'></img><li>Podcast</li>
+                            <img src={podcast} className='img--icon'alt='podcast'></img><li id='podcast'>Podcast</li>
                         </Link>  
                     </div>
                 </ul>
