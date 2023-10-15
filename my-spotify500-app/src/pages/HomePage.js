@@ -36,7 +36,6 @@ export default function HomePage() {
       </Link>   
       
       <hr></hr>
-      <p className="footer--p">&copy; 2023 mab.dev</p>
 
       </>
     )

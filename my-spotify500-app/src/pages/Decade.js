@@ -37,7 +37,6 @@ export default function Decade () {
             <hr></hr>
 
         </div>
-        <p className="footer--p">&copy; 2023 mab.dev </p>
 
          </>
         

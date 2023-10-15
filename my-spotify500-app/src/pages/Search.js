@@ -51,7 +51,6 @@ export default function Search() {
             <hr></hr>
 
         </section>
-        <p className="footer--p">&copy; 2023 mab.dev</p>
 
         </>
     )

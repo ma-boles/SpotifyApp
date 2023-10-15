@@ -12,9 +12,11 @@ import Login from './pages/LoginPage';
 import MobileSearch from './pages/MobileSearch';
 
 
+
 import MusicPlayer from './components/Music-player';
 import Nav from './components/Nav';
 import NowPlaying from './components/NowPlaying';
+import Footer from './components/Footer';
 
 
 /*import right from "../images/chevron-right-solid.svg";
@@ -40,12 +42,14 @@ export default function App() {
             <Route path='/' element={<Login />} />
             <Route path='/MobileSearch' element={<MobileSearch/>}/>
           </Routes>
+
+          <Footer />
+
       </div>
       <NowPlaying />
 
     </div>
 
-    
       <MusicPlayer />
     </>
     );

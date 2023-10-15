@@ -38,7 +38,6 @@ export default function Top500 () {
             <hr></hr>
             
         </div>
-        <p className="footer--p">&copy; 2023 mab.dev</p>
 
         </>
     )

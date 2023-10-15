@@ -38,7 +38,6 @@ export default function Podcasts () {
             <hr></hr>
 
         </section>
-        <p className="footer--p">&copy; 2023 mab.dev</p>
 
         
         </>

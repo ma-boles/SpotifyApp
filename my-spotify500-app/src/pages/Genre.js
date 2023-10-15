@@ -38,7 +38,6 @@ export default function Genre () {
             <hr></hr>
 
         </div>
-            <p className="footer--p">&copy; 2023 mab.dev</p>
 </>
     )
 }
