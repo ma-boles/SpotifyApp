@@ -2,7 +2,7 @@ import React from "react"
 import "../styles/App.css"
 
 import close from "../images/xmark-solid.svg";
-import img from "../images/600px-Placeholder.png";
+import img from "../images/NowPlaying.png";
 
 
 

@@ -1,5 +1,6 @@
 import "../styles/Albums.css";
-import album from "../images/album-placeholder.png"
+import album from "../images/AlbumCover.png"
+
 
 export default function Album () {
 
@@ -14,6 +15,12 @@ export default function Album () {
      const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     
      // Modify the styles object based on the window width
+     if(windowWidth <= 768) {
+        styles.width = '160px'
+        styles.height = '160px'
+        styles.margin = '15px'
+
+     }
      if (windowWidth <= 425) {
          styles.width = '100px';
          styles.height = '100px';
