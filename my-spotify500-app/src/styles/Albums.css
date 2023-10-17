@@ -1,3 +1,4 @@
+
 .card--album {
     background-color: rgb(29, 29, 29);
     width: 13em;
@@ -25,6 +26,12 @@
 }
 
 /* mobile screens */
+@media screen and (max-width: 768px) {
+    .card--album {
+        width: 12rem
+    }
+    
+}
 @media screen and (max-width: 425px) {
     .card--album {
         width: 100%;
