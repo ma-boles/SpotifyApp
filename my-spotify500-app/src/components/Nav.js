@@ -10,7 +10,7 @@ import genre from "../images/music-solid.svg";
 import decade from "../images/calendar-solid.svg";
 import artist from "../images/user-regular.svg";
 import podcast from "../images/podcast-solid.svg";
-import album from "../images/album-placeholder.png";
+import album from "../images/AlbumCover.png";
 import back from "../images/backward-step-solid.svg";
 import play from "../images/circle-play-solid.svg";
 import forward from "../images/forward-step-solid.svg";

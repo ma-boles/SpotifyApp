@@ -1,6 +1,6 @@
 import "../styles/Music-player.css";
 
-import placeholder from "../images/600px-Placeholder.png";
+import placeholder from "../images/NowPlaying.png";
 import upDown from "../images/chevron-up-solid.svg";
 import plus from "../images/circle-plus-solid.svg";
 import picNpic from "../images/picNpic.png";
