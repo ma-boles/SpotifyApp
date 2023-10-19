@@ -26,10 +26,11 @@ export default function HomePage() {
           <div className="header--top10">
             <h1 className="h1--home">Top 10</h1>
 
-          <Link to="../LoginPage" className="a--logIn">
-            <button className="button--logIn">Log In</button>
-          </Link>
+            <Link to="../LoginPage" className="a--logIn">
+              <button className="button--logIn">Log In</button>
+            </Link>
           </div>
+
           <div className="top10">
               <Album />
               <Album />
