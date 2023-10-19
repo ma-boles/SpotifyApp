@@ -8,7 +8,7 @@ import Genre from "../src/pages/Genre";
 import Podcasts from "../src/pages/Podcasts";
 import HomePage from './pages/HomePage';
 import Search from './pages/Search';
-import Login from './pages/LoginPage';
+import LoginPage from './pages/LoginPage';
 import MobileSearch from './pages/MobileSearch';
 
 
@@ -39,7 +39,7 @@ export default function App() {
             <Route path='/Genre' element={<Genre />} />
             <Route path='/Podcasts' element={<Podcasts />} />
             <Route path='/Search' element={<Search />}/>
-            <Route path='/' element={<Login />} />
+            <Route path='/LoginPage' element={<LoginPage />} />
             <Route path='/MobileSearch' element={<MobileSearch/>}/>
           </Routes>
 
