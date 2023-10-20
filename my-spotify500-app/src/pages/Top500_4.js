@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/Top500.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
@@ -89,16 +90,45 @@ export default function Top500_4 () {
             </div>
             <div className="top500--links">
                 <ul className="top500--ul">
-                    <li className="top500--li">1-50</li>
-                    <li className="top500--li">51-100</li>
-                    <li className="top500--li">101-150</li>
-                    <li className="top500--li">151-200</li>
-                    <li className="top500--li">201-250</li>
-                    <li className="top500--li">251-300</li>
-                    <li className="top500--li">301-350</li>
-                    <li className="top500--li">351-400</li>
-                    <li className="top500--li">401-450</li>
-                    <li className="top500--li">451-500</li>
+
+                    <Link to="../Top500">
+                        <li className="top500--li">1-50</li>
+                    </Link>
+
+                    <Link to="../Top500_2">
+                        <li className="top500--li">51-100</li>
+                    </Link>
+
+                    <Link to="../Top500_3">
+                        <li className="top500--li">101-150</li>
+                    </Link>
+
+                    <Link to="../Top500_3">
+                        <li className="top500--li">151-200</li>
+                    </Link>
+
+                        <li className="top500--li--current">201-250</li>
+
+                    <Link to="../Top500_5">
+                        <li className="top500--li">251-300</li>
+                    </Link>
+
+                    <Link to="../Top500_6">
+                        <li className="top500--li">301-350</li>
+                    </Link>
+
+                    <Link to="../Top500_7">
+                        <li className="top500--li">351-400</li>
+                    </Link>
+
+                    <Link to="../Top500_8">
+                        <li className="top500--li">401-450</li>
+                    </Link>
+
+                    <Link to="../Top500_9">
+                        <li className="top500--li">451-500</li>
+                    </Link>
+                    
                 </ul>
             </div>
             <hr></hr>
