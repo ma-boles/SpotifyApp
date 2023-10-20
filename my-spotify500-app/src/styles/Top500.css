@@ -62,6 +62,31 @@
     padding: .25%;
 }
 
+.top500--links {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.top500--ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px;
+}
+.top500--li {
+    font-size: 1rem;
+    margin-left: 0px;
+}
+.top500--li--current {
+    font-size: 1rem;
+    margin-left: 0px;
+    color: black;
+    cursor: none;
+}
+.top500--li--current:hover {
+    color: black;
+} 
 @media screen and (max-width: 425px) {
     .top500--nav {
         display: none;
