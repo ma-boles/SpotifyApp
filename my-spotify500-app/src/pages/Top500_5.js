@@ -103,29 +103,29 @@ export default function Top500_5 () {
                         <li className="top500--li">101-150</li>
                     </Link>
 
-                    <Link to="../Top500_3">
+                    <Link to="../Top500_4">
                         <li className="top500--li">151-200</li>
                     </Link>
 
-                    <Link to="../Top500_4">
-                        <li className="top500--li">201-250</li>
-                    </Link>
-
-                        <li className="top500--li--current">251-300</li>
+                        <li className="top500--li--current">201-250</li>
 
                     <Link to="../Top500_6">
-                        <li className="top500--li">301-350</li>
+                        <li className="top500--li">251-300</li>
                     </Link>
 
                     <Link to="../Top500_7">
-                        <li className="top500--li">351-400</li>
+                        <li className="top500--li">301-350</li>
                     </Link>
 
                     <Link to="../Top500_8">
-                        <li className="top500--li">401-450</li>
+                        <li className="top500--li">351-400</li>
                     </Link>
 
                     <Link to="../Top500_9">
+                        <li className="top500--li">401-450</li>
+                    </Link>
+
+                    <Link to="../Top500_10">
                         <li className="top500--li">451-500</li>
                     </Link>
                     

@@ -59,7 +59,7 @@ export default function App() {
             <Route path='/Top500_7' element={<Top500_7 />}/>
             <Route path='/Top500_8' element={<Top500_8 />}/>
             <Route path='/Top500_9' element={<Top500_9 />}/>
-            <Route path='./Top500_10' element={<Top500_10 />}/>
+            <Route path='/Top500_10' element={<Top500_10 />}/>
           </Routes>
 
           <Footer />
