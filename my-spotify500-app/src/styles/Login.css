@@ -29,18 +29,19 @@ text-align: center;
 }
 .login--img {
     width: 15rem;
-    margin-top: 10%;
+    margin-top: 20%;
+    margin-bottom: 15%;
 }
 .login--h2 {
     font-size: 1.2rem;
 }
 input {
     text-indent: 5px;
-    padding: 5px;
-    border-radius: 7px;
+    padding: 7px;
+    border-radius: 20px;
     margin: 10px;
     width: 70%;
-    background-color: rgb(46, 46, 46);
+    background-color: rgb(29, 29, 29);
     color: whitesmoke;
     font-size: .8rem;
 }
@@ -48,6 +49,9 @@ input {
 .div--remember {
     display: flex;
     margin-left: 13%;
+    margin-right: 9%;
+    justify-content: space-between;
+    
 }
 #radio {
     width: 1rem;
@@ -57,7 +61,7 @@ input {
 .login--div--button {
     text-align: center;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 .login--a--login {
     width: 100%;
@@ -66,10 +70,12 @@ input {
 .login--button--login,
 .login--button--facebook {
     background-color: #1db954;
-    padding: 1.5%;
+    color: white;
+    padding: 3%;
     border-radius: 20px;
     width: 73%;
     margin: 2%;
+    
     cursor: pointer;
     font-weight: bolder;
     font-size: .75rem;
@@ -83,4 +89,13 @@ input {
     filter: invert(1);
     width: 85%;
     margin: auto;
+    margin-top: 5rem;
+    display: none;
+}
+strong {
+    color: #1db954;
+    cursor: pointer;
+}
+strong:hover {
+    color: white;
 }

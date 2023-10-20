@@ -7,9 +7,11 @@ export default function LoginCard() {
     return(
         <section className="login--card">
             <img src={Logo} className="login--img"></img>
-            <h2 className="login--h2">Log in to continue.</h2>
+            {/*<h2 className="login--h2">Log in to continue.</h2>*/}
+            <div>
             <input placeholder="Email or username" type="text"></input>
             <input placeholder="Password" type="password"></input>
+            </div>
 
         <div className="div--remember">
             <p>Remember me</p>
@@ -23,7 +25,7 @@ export default function LoginCard() {
             </Link>
             
             <hr className="login--hr"/>
-            <button className="login--button--facebook">LOG IN WITH FACEBOOK</button>
+         {   /*<button className="login--button--facebook">LOG IN WITH FACEBOOK</button>*/}
             <p>DON'T HAVE AN ACCOUNT? <strong>SIGNUP</strong></p>
         </div>
         </section>
