@@ -37,6 +37,21 @@ nav {
     margin-right: 8em;
   }
   
+.line--collection {
+  display: inline-flex;
+  margin-bottom: .5rem;
+  }
+  .img--icon--coll {
+    width: 1.7em;
+    margin-bottom: 1.3em;
+    filter:invert(.5);
+    transform: scaleX(-1);
+    cursor: pointer;
+  }
+  .img--icon--coll:hover {
+    filter:invert(1)
+  }
+  
 li {
     line-height: 2em;
     font-size: 1.2em;

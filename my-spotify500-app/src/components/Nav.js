@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/App.css";
 import "../styles/Nav.css"
 
+import expand from "../images/lines-leaning-solid.svg"
 import home from "../images/house-solid.svg";
 import search from "../images/magnifying-glass-solid.svg";
 import library from "../images/radio-solid.svg";
@@ -20,6 +21,17 @@ import forward from "../images/forward-step-solid.svg";
 
 
 export default function Nav() {
+
+   function test() {
+        const hide = document.getElementById("hide");
+
+        if(hide.style.display === "none") {
+            hide.style.display = "block"
+        } else {
+            hide.style.display = "none"
+        }
+   }
+
     return(
         <>
          {/* STATIC NAV SIDEBAR */}
@@ -29,46 +41,51 @@ export default function Nav() {
 
                     <div className='line--item'>
                         <Link to="/" >
-                            <img src={home} className='img--icon' alt='home'></img><li>Home</li>
+                            <img src={home} className='img--icon' alt='home'></img><li id="hide">Home</li>
                          </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Search">
-                    <img src={search} className='img--icon' alt='search'></img><li>Search</li>
+                    <img src={search} className='img--icon' alt='search'></img><li id="hide">Search</li>
                         </Link>
                     </div>
                 </ul>
                 
                 <ul className='ul--bottom'>
 
+                    <div className="line--collection">
+                        <img src={expand} className='img--icon--coll' onClick={test}></img>
+                        <li id="collection hide">Complete Collection</li>
+
+                    </div>
                     <div className='line--item'>
                         <Link to="./Top500">
-                            <img src={library} className='img--icon' alt='Top 500'></img><li id='top500'>Top 500</li>
+                            <img src={library} className='img--icon' alt='Top 500'></img><li id='top500 hide'>Top 500</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Genre">
-                            <img src={genre} className='img--icon'alt='genre'></img><li id='genre'>Genre</li>
+                            <img src={genre} className='img--icon'alt='genre'></img><li id='genre hide'>Genre</li>
                         </Link>  
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Decade">
-                            <img src={decade} className='img--icon'alt='decade'></img><li id='decade'>Decade</li>
+                            <img src={decade} className='img--icon'alt='decade'></img><li id='decade hide'>Decade</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Login">
-                    <img src={artist} className='img--icon'alt='artist'></img><li id='artist'>Artist</li>
+                    <img src={artist} className='img--icon'alt='artist'></img><li id='artist hide'>Artist</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Podcasts"> 
-                            <img src={podcast} className='img--icon'alt='podcast'></img><li id='podcast'>Podcast</li>
+                            <img src={podcast} className='img--icon'alt='podcast'></img><li id='podcast hide'>Podcast</li>
                         </Link>  
                     </div>
                 </ul>
