@@ -19,6 +19,7 @@ import Top500_6 from './pages/Top500_6';
 import Top500_7 from './pages/Top500_7';
 import Top500_8 from './pages/Top500_8';
 import Top500_9 from './pages/Top500_9';
+import Top500_10 from './pages/Top500_10';
 
 
 import MusicPlayer from './components/Music-player';
@@ -58,6 +59,7 @@ export default function App() {
             <Route path='/Top500_7' element={<Top500_7 />}/>
             <Route path='/Top500_8' element={<Top500_8 />}/>
             <Route path='/Top500_9' element={<Top500_9 />}/>
+            <Route path='./Top500_10' element={<Top500_10 />}/>
           </Routes>
 
           <Footer />
