@@ -13,19 +13,22 @@ text-align: center;
     margin-top: 20%;
 }
 
+
+
 /* log in card */
 .login--card {
-    width: 40%;
+    width: 30%;
     height: 90%;
     background-color: #191414;
     border: white double 2px;
     border-radius: 20px;
     text-align: center;
     color: whitesmoke;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
+    margin-left: 15%;
+    margin-top: 1%;
     margin-bottom: 3%;
+    position: absolute;
+    top: 0px;
 }
 .login--img {
     width: 15rem;
@@ -61,7 +64,7 @@ input {
 .login--div--button {
     text-align: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 0rem;
 }
 .login--a--login {
     width: 100%;
@@ -73,9 +76,8 @@ input {
     color: white;
     padding: 3%;
     border-radius: 20px;
-    width: 73%;
+    width: 75%;
     margin: 2%;
-    
     cursor: pointer;
     font-weight: bolder;
     font-size: .75rem;
