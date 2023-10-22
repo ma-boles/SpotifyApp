@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Album from "../components/Album";
+import Modal from "../components/Modal";
+import LoginCard from "../components/LoginCard";
+
 import HeaderImg from "../images/HomeLogo.jpg";
 import Logo from "../images/Spotify_Logo_RGB_White.png";
 
 import "../styles/HomePage.css";
 import "../styles/Login.css";
-import { Link } from "react-router-dom";
 
 export default function HomePage() {
 
@@ -17,21 +20,16 @@ export default function HomePage() {
         backgroundPosition: "center",
       };
 
-      function loginOpen(){
-        const modal = document.getElementById("login--modal");
-        const card = document.getElementById("login--card");
+      const [isModalOpen, setModalOpen] = useState(false);
 
-        modal.style.display = "block"
-        card.style.display = "block"
-      }
-
-      function loginClose() {
-        const close = document.getElementById("login--card");
-        const modal = document.getElementById("login--modal");
-
-        close.style.display = "none"
-        modal.style.display = "none"
-    }
+      const openModal = () => {
+        console.log("opening modal")
+        setModalOpen(true);
+      };
+      const closeModal = () => {
+        console.log("closing modal")
+        setModalOpen(false);
+};
 
     return(
         <>
@@ -42,44 +40,17 @@ export default function HomePage() {
 
             </div>
 
-          < div className="header--top10">
+          <div className="header--top10">
             <h1 className="h1--home">Top 10</h1>
+              <button className="button--logIn" onClick={openModal}>Log In</button>
+               {/* login modal section */}
 
-              <button className="button--logIn" onClick={loginOpen}>Log In</button>
+               <Modal isOpen={isModalOpen} onClose={closeModal}>
+                <LoginCard closeModal={closeModal}/>
+              </Modal>
           </div>
 
-
-        {/* login modal section */}
-
-         <div className="login--modal" id="login--modal">
-            <h1>login</h1>
-
-            <section className="login--card" id="login--card">
-                <img src={Logo} className="login--img"></img>
-                {/*<h2 className="login--h2">Log in to continue.</h2>*/}
-                <div>
-                <input placeholder="Email or username" type="text"></input>
-                <input placeholder="Password" type="password"></input>
-                </div>
-
-            <div className="div--remember">
-                <p>Remember me</p>
-                <input type="radio" id="radio"></input>
-            </div>
-            
-            <div className="login--div--button">
-
-                <Link to="/" className="login--a--login">
-                    <button className="login--button--login" onClick={loginClose}>LOG IN</button>
-                </Link>
-
-                <hr className="login--hr"/>
-            {   /*<button className="login--button--facebook">LOG IN WITH FACEBOOK</button>*/}
-                <p>DON'T HAVE AN ACCOUNT? <strong>SIGNUP</strong></p>
-            </div>
-            </section>
-
-          </div>
+             
 
           <div className="top10">
               <Album />
