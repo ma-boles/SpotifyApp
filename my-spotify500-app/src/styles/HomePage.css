@@ -44,16 +44,6 @@
     color: black;
 }
 
-
-.login--modal {
-    position: absolute;
-    top: 0px;
-    background-color: rgba(0, 0, 0, 0.799);
-    height: 90vh;
-    width: 100%;
-    display: none;
-}
-
 h4 {
 color: whitesmoke;  
 margin: 3em;

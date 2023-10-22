@@ -13,7 +13,13 @@ text-align: center;
     margin-top: 20%;
 }
 
-
+.modal {
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.799);
+    height: 90vh;
+    width: 100%;
+}
 
 /* log in card */
 .login--card {
@@ -33,10 +39,11 @@ text-align: center;
 .login--img {
     width: 15rem;
     margin-top: 20%;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
 }
 .login--h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 input {
     text-indent: 5px;
