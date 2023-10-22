@@ -81,11 +81,11 @@
 .top500--li--current {
     font-size: 1rem;
     margin-left: 0px;
-    color: black;
+    color: #1db954;
     cursor: none;
 }
 .top500--li--current:hover {
-    color: black;
+    color: #1db954;
 } 
 @media screen and (max-width: 425px) {
     .top500--nav {
