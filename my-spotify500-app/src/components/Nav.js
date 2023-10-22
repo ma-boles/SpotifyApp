@@ -17,9 +17,6 @@ import play from "../images/circle-play-solid.svg";
 import forward from "../images/forward-step-solid.svg";
 
 
-
-
-
 export default function Nav() {
 
    function test() {
@@ -55,10 +52,10 @@ export default function Nav() {
                 <ul className='ul--bottom'>
 
                     <div className="line--collection">
-                        <img src={expand} className='img--icon--coll' onClick={test}></img>
-                        <li id="collection hide">Complete Collection</li>
-
+                        <img src={expand} className='img--icon--coll' id="collection hide" onClick={test}></img>
+                        <li className="li--coll">Complete Collection</li>
                     </div>
+
                     <div className='line--item'>
                         <Link to="./Top500">
                             <img src={library} className='img--icon' alt='Top 500'></img><li id='top500 hide'>Top 500</li>
