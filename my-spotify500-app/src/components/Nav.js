@@ -20,17 +20,34 @@ import forward from "../images/forward-step-solid.svg";
 export default function Nav() {
 
     const [ areElementsHidden, setAreElementsHidden ] = useState(false);
+    const [ sideSize, setSideSize ] = useState('18em');
+    const [ navSize, setNavSize ] = useState('18em');
+
 
     const toggleVisibility = () => {
         setAreElementsHidden(!areElementsHidden);
+
+        if(sideSize === '18em') {
+            setSideSize('5%');
+            setNavSize('100%');
+        } else {
+            setSideSize('18em');
+            setNavSize('18em');
+        }
     };
 
 
     return(
         <>
          {/* STATIC NAV SIDEBAR */}
-         <side className="side">
-            <nav>
+         <side className="side" style={{
+            width: sideSize,
+            height: '100%'
+         }}>
+            <nav style={{
+                width: navSize,
+                height: '100%'
+            }}>
                 <ul className='ul--top'>
 
                     <div className='line--item'>
