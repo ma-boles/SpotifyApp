@@ -16,26 +16,27 @@ text-align: center;
 .modal {
     position: absolute;
     top: 0px;
-    background-color: rgba(0, 0, 0, 0.799);
+    background-color: rgba(0, 0, 0, 0.847);
     height: 90vh;
     width: 100%;
 }
 
 /* log in card */
+
 .login--card {
     width: 30%;
-    height: 90%;
+    height: 80%;
     background-color: #191414;
-    border: white double 2px;
+    border: 2px double white;
     border-radius: 20px;
     text-align: center;
     color: whitesmoke;
-    margin-left: 15%;
-    margin-top: 1%;
-    margin-bottom: 3%;
-    position: absolute;
-    top: 0px;
-}
+    margin: 1% 0 3%;
+    position: fixed;
+    top: 15px;
+    right: 35%;
+  }
+  
 .login--img {
     width: 15rem;
     margin-top: 20%;
