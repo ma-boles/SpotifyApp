@@ -19,15 +19,12 @@ import forward from "../images/forward-step-solid.svg";
 
 export default function Nav() {
 
-   function test() {
-        const hide = document.getElementById("hide");
+    const [ areElementsHidden, setAreElementsHidden ] = useState(false);
 
-        if(hide.style.display === "none") {
-            hide.style.display = "block"
-        } else {
-            hide.style.display = "none"
-        }
-   }
+    const toggleVisibility = () => {
+        setAreElementsHidden(!areElementsHidden);
+    };
+
 
     return(
         <>
@@ -38,13 +35,13 @@ export default function Nav() {
 
                     <div className='line--item'>
                         <Link to="/" >
-                            <img src={home} className='img--icon' alt='home'></img><li id="hide">Home</li>
+                            <img src={home} className='img--icon' alt='home'></img><li className={areElementsHidden ? 'hidden': ''}>Home</li>
                          </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Search">
-                    <img src={search} className='img--icon' alt='search'></img><li id="hide">Search</li>
+                    <img src={search} className='img--icon' alt='search'></img><li className={areElementsHidden ? 'hidden': ''}>Search</li>
                         </Link>
                     </div>
                 </ul>
@@ -52,37 +49,38 @@ export default function Nav() {
                 <ul className='ul--bottom'>
 
                     <div className="line--collection">
-                        <img src={expand} className='img--icon--coll' id="collection hide" onClick={test}></img>
-                        <li className="li--coll">Complete Collection</li>
+                        <img src={expand} className='img--icon--coll' id="collection" 
+                        onClick={toggleVisibility}></img>
+                        <li id="li--coll" className={areElementsHidden ? 'hidden': '' }>Collection</li>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Top500">
-                            <img src={library} className='img--icon' alt='Top 500'></img><li id='top500 hide'>Top 500</li>
+                            <img src={library} className='img--icon' alt='Top 500'></img><li id='top500' className={areElementsHidden ? 'hidden': ''}>Top 500</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Genre">
-                            <img src={genre} className='img--icon'alt='genre'></img><li id='genre hide'>Genre</li>
+                            <img src={genre} className='img--icon'alt='genre'></img><li id='genre' className={areElementsHidden ? 'hidden': ''}>Genre</li>
                         </Link>  
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Decade">
-                            <img src={decade} className='img--icon'alt='decade'></img><li id='decade hide'>Decade</li>
+                            <img src={decade} className='img--icon'alt='decade'></img><li id='decade' className={areElementsHidden ? 'hidden': ''}>Decade</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Login">
-                    <img src={artist} className='img--icon'alt='artist'></img><li id='artist hide'>Artist</li>
+                    <img src={artist} className='img--icon'alt='artist'></img><li id='artist' className={areElementsHidden ? 'hidden': ''}>Artist</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Podcasts"> 
-                            <img src={podcast} className='img--icon'alt='podcast'></img><li id='podcast hide'>Podcast</li>
+                            <img src={podcast} className='img--icon'alt='podcast'></img><li id='podcast' className={areElementsHidden ? 'hidden': ''}>Podcast</li>
                         </Link>  
                     </div>
                 </ul>

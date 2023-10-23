@@ -39,7 +39,8 @@ nav {
   
 .line--collection {
   display: inline-flex;
-  margin-bottom: .5rem;
+  margin-right: 8em;
+
   }
   .img--icon--coll {
     width: 1.7em;
@@ -58,7 +59,6 @@ li {
     color: grey;
     margin-left: 1.5em;
     font-weight: 700;
-    margin-bottom: .5em;
   }
   
 li:hover {
@@ -71,7 +71,7 @@ a {
     cursor: pointer;
     text-decoration: none;
   }
-.li--coll {
+#li--coll {
   line-height: 2em;
   font-size: 1.2em;
   color: whitesmoke;
@@ -79,9 +79,12 @@ a {
   font-weight: 700;
   margin-bottom: .5em;
 }
+.hidden {
+  display: none;
+}
 .img--icon {
     width: 1.7em;
-    margin-bottom: 1.3em;
+    margin-bottom: 1.5em;
     filter:invert(.5)
   }
   
