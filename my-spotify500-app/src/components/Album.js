@@ -2,7 +2,7 @@ import "../styles/Albums.css";
 import album from "../images/AlbumCover.png"
 
 
-export default function Album () {
+export default function Album ({ albumData }) {
 
     const styles = {
         width: "175px",
@@ -38,8 +38,8 @@ export default function Album () {
         <div className="card--album">
             <img style={styles} src={album} classname="album--cover" ></img>
             <div className="album--info">
-                <h2 className="album--h2">Album</h2>
-                <h3 className="album--h3">Year・Artist</h3>
+                <h2 className="album--h2">{albumData.name}</h2>
+                <h3 className="album--h3">{albumData.release_date}・{albumData.artists[0].name}</h3>
             </div>
         </div>
         )
