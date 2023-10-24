@@ -35,16 +35,16 @@ import left from "../images/chevron-left-solid.svg"*/
 
 export default function App() {
 
-  const [ accessToken, setAcessToken ] = useState('');
+  const [ accessToken, setAccessToken ] = useState('');
 
-  const handleTokenOtained = (token) => 
-  setAcessToken(token);
+  const handleTokenObtained = (token) => 
+  setAccessToken(token);
 
 
   return (
     <>
     {/* access token */}
-    <Authentication onTokenObtained={handleTokenOtained}/>
+    <Authentication onTokenObtained={handleTokenObtained}/>
 
     <div className="App">
 
