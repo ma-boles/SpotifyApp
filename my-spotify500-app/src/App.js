@@ -1,7 +1,8 @@
 import '../src/styles/App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 
+import Authentication from './components/Authentication';
 import Top500 from "../src/pages/Top500";
 import Decade from "../src/pages/Decade";
 import Genre from "../src/pages/Genre";
@@ -33,8 +34,18 @@ import left from "../images/chevron-left-solid.svg"*/
 /*import album from "../images/album-placeholder.png";*/
 
 export default function App() {
+
+  const [ accessToken, setAcessToken ] = useState('');
+
+  const handleTokenOtained = (token) => 
+  setAcessToken(token);
+
+
   return (
     <>
+    {/* access token */}
+    <Authentication onTokenObtained={handleTokenOtained}/>
+
     <div className="App">
 
           <Nav />
@@ -42,13 +53,14 @@ export default function App() {
       <div className='home--container'>
         {/* new page loads */}
           <Routes>
-            <Route path='/' element={<HomePage />} />
+          {/* example: <HomePage accessToken={accessToken} /> */}
+            <Route path='/' element={<HomePage  />} />
             <Route path='/Decade' element={<Decade />} />
             <Route path='/Top500' element={<Top500 />} />
             <Route path='/Genre' element={<Genre />} />
             <Route path='/Podcasts' element={<Podcasts />} />
             <Route path='/Search' element={<Search />}/>
-            <Route path='/LoginPage' element={<LoginPage />} />
+         {/*<Route path='/LoginPage' element={<LoginPage />} />*/}
             <Route path='/MobileSearch' element={<MobileSearch/>}/>
 
             <Route path='/Top500_2' element={<Top500_2 />}/>
