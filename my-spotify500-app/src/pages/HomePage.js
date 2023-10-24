@@ -15,10 +15,33 @@ export default function HomePage({ accessToken }) {
     const [ albumData, setAlbumData ] = useState([]);
 
     useEffect(() => {
-      const albumIds = ['album_1', 'album_2', 'album_3','album_4','album_5','album_6','album_7','album_8','album_9','album_10' ]; //album ids from api
+      const albumIds = ['spotify:album:2v6ANhWhZBUKkg6pJJBs3B'/*, 'album_2', 'album_3','album_4','album_5','album_6','album_7','album_8','album_9','album_10'*/ ]; //album ids from api
 
-      
-    })
+      const fetchDataForAlbum = async (albumId) => {
+        try {
+          const response = await fetch(`https://api.spotify.com/v1/albums/${albumId}`, {
+            headers: {
+              'Authorization': `Bearer ${accessToken}`,
+            },
+          });
+          
+          if(response.status === 200) {
+            const data = await response.json();
+            setAlbumData((prevData) =>[...prevData, data]);
+          } else {
+            console.error('Error fetching album data');
+          }
+        } catch(error) {
+          console.error('Error:', error);
+        }
+      };
+
+      //fetch data for each album id
+      albumIds.forEach((albumId) => {
+        fetchDataForAlbum(albumId);
+      });
+    }, [accessToken]);
+
 
     const styles = {
         width: "90%",
@@ -58,9 +81,12 @@ export default function HomePage({ accessToken }) {
               </Modal>
           </div>
 
-             
 
           <div className="top10">
+            {albumData.slice(0, 10).map((album, index) => {
+              <Album key={index} albumData={album}/>
+            })}
+              {/*<Album />
               <Album />
               <Album />
               <Album />
@@ -69,8 +95,7 @@ export default function HomePage({ accessToken }) {
               <Album />
               <Album />
               <Album />
-              <Album />
-              <Album />
+              <Album />*/}
           </div>
 
       </section>
