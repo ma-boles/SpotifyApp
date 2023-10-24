@@ -54,7 +54,7 @@ export default function App() {
         {/* new page loads */}
           <Routes>
           {/* example: <HomePage accessToken={accessToken} /> */}
-            <Route path='/' element={<HomePage  />} />
+            <Route path='/' element={<HomePage  accessToken={accessToken}/>} />
             <Route path='/Decade' element={<Decade />} />
             <Route path='/Top500' element={<Top500 />} />
             <Route path='/Genre' element={<Genre />} />
