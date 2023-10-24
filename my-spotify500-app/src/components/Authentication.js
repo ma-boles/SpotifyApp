@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 export default function Authentication({ onTokenObtained }) {
 
     useEffect(() => {
-        const CLIENT_ID = 'client id';
-        const CLIENT_SECRET = 'client secret';
+        const CLIENT_ID = '';
+        const CLIENT_SECRET = '';
 
         const tokenUrl = "https://accounts.spotify.com/api/token";
 
