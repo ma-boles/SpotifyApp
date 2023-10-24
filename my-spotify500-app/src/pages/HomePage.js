@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Album from "../components/Album";
 import Modal from "../components/Modal";
@@ -10,7 +10,15 @@ import Logo from "../images/Spotify_Logo_RGB_White.png";
 import "../styles/HomePage.css";
 import "../styles/Login.css";
 
-export default function HomePage() {
+export default function HomePage({ accessToken }) {
+
+    const [ albumData, setAlbumData ] = useState([]);
+
+    useEffect(() => {
+      const albumIds = ['album_1', 'album_2', 'album_3','album_4','album_5','album_6','album_7','album_8','album_9','album_10' ]; //album ids from api
+
+      
+    })
 
     const styles = {
         width: "90%",
