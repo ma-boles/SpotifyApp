@@ -1,0 +1,25 @@
+{
+  "name": "spotifyapp",
+  "version": "1.0.0",
+  "description": "A project using the Spotify API",
+  "main": "server.js",
+  "scripts": {
+    "test": "(npm test)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ma-boles/SpotifyApp.git"
+  },
+  "keywords": [
+    "API",
+    "react",
+    "nodejs",
+    "express"
+  ],
+  "author": "Mary Boles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ma-boles/SpotifyApp/issues"
+  },
+  "homepage": "https://github.com/ma-boles/SpotifyApp#readme"
+}
