@@ -12,15 +12,15 @@ import Search from './pages/Search';
 import LoginPage from './pages/LoginPage';
 import MobileSearch from './pages/MobileSearch';
 
-import Top500_2 from './pages/Top500_2';
-import Top500_3 from './pages/Top500_3';
-import Top500_4 from './pages/Top500_4';
-import Top500_5 from './pages/Top500_5';
-import Top500_6 from './pages/Top500_6';
-import Top500_7 from './pages/Top500_7';
-import Top500_8 from './pages/Top500_8';
-import Top500_9 from './pages/Top500_9';
-import Top500_10 from './pages/Top500_10';
+import Top5002 from './pages/Top5002';
+import Top5003 from './pages/Top5003';
+import Top5004 from './pages/Top5004';
+import Top5005 from './pages/Top5005';
+import Top5006 from './pages/Top5006';
+import Top5007 from './pages/Top5007';
+import Top5008 from './pages/Top5008';
+import Top5009 from './pages/Top5009';
+import Top50010 from './pages/Top50010';
 
 
 import MusicPlayer from './components/Music-player';
@@ -67,15 +67,15 @@ export default function App() {
          {/*<Route path='/LoginPage' element={<LoginPage />} />*/}
             <Route path='/MobileSearch' element={<MobileSearch/>}/>
 
-            <Route path='/Top500_2' element={<Top500_2 />}/>
-            <Route path='/Top500_3' element={<Top500_3 />}/>
-            <Route path='/Top500_4' element={<Top500_4 />}/>
-            <Route path='/Top500_5' element={<Top500_5 />}/>
-            <Route path='/Top500_6' element={<Top500_6 />}/>
-            <Route path='/Top500_7' element={<Top500_7 />}/>
-            <Route path='/Top500_8' element={<Top500_8 />}/>
-            <Route path='/Top500_9' element={<Top500_9 />}/>
-            <Route path='/Top500_10' element={<Top500_10 />}/>
+            <Route path='/Top5002' element={<Top5002 />}/>
+            <Route path='/Top5003' element={<Top5003 />}/>
+            <Route path='/Top5004' element={<Top5004 />}/>
+            <Route path='/Top5005' element={<Top5005 />}/>
+            <Route path='/Top5006' element={<Top5006 />}/>
+            <Route path='/Top5007' element={<Top5007 />}/>
+            <Route path='/Top5008' element={<Top5008 />}/>
+            <Route path='/Top5009' element={<Top5009 />}/>
+            <Route path='/Top50010' element={<Top50010 />}/>
           </Routes>
 
           <Footer />
