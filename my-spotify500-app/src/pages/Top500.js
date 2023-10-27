@@ -11,8 +11,8 @@ export default function Top500 () {
         <div className="top500--page">
             <div className="top500--header">
                 <nav className="top500--nav">
-                    <img src={left} className='top500--arrowLeft'></img>
-                    <img src={right} className='top500--arrowRight'></img>
+                    <img src={left} className='top500--arrowLeft' alt="back"></img>
+                    <img src={right} className='top500--arrowRight' alt="next"></img>
                 </nav>
                 
                 <h1 className="h1--top500">
