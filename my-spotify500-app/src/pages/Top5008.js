@@ -4,7 +4,7 @@ import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
 
-export default function Top500_9 () {
+export default function Top5008 () {
     return (
         <>
         <div className="top500--page">
@@ -119,13 +119,12 @@ export default function Top500_9 () {
                         <li className="top500--li">301-350</li>
                     </Link>
 
-                    <Link to="../Top500_8">
-                        <li className="top500--li">351-400</li>
+                        <li className="top500--li--current">351-400</li>
+                    
+                    <Link to="../Top500_9">
+                        <li className="top500--li">401-450</li>
                     </Link>
 
-                    
-                        <li className="top500--li--current">401-450</li>
-                    
                     <Link to="../Top500_10">
                         <li className="top500--li">451-500</li>
                     </Link>
