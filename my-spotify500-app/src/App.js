@@ -9,7 +9,7 @@ import Genre from "../src/pages/Genre";
 import Podcasts from "../src/pages/Podcasts";
 import HomePage from './pages/HomePage';
 import Search from './pages/Search';
-import LoginPage from './pages/LoginPage';
+/*import LoginPage from './pages/LoginPage';*/
 import MobileSearch from './pages/MobileSearch';
 
 import Top5002 from './pages/Top5002';
