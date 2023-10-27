@@ -92,39 +92,39 @@ export default function Top500 () {
             <div className="top500--links">
                 <ul className="top500--ul">
 
-                    <Link to="../Top500_2">
+                    <Link to="../Top5002">
                         <li className="top500--li">51-100</li>
                     </Link>
 
-                    <Link to="../Top500_3">
+                    <Link to="../Top5003">
                         <li className="top500--li">101-150</li>
                     </Link>
 
-                    <Link to="../Top500_3">
+                    <Link to="../Top5004">
                         <li className="top500--li">151-200</li>
                     </Link>
 
-                    <Link to="../Top500_4">
+                    <Link to="../Top5005">
                         <li className="top500--li">201-250</li>
                     </Link>
 
-                    <Link to="../Top500_5">
+                    <Link to="../Top5006">
                         <li className="top500--li">251-300</li>
                     </Link>
 
-                    <Link to="../Top500_6">
+                    <Link to="../Top5007">
                         <li className="top500--li">301-350</li>
                     </Link>
 
-                    <Link to="../Top500_7">
+                    <Link to="../Top5008">
                         <li className="top500--li">351-400</li>
                     </Link>
 
-                    <Link to="../Top500_8">
+                    <Link to="../Top5009">
                         <li className="top500--li">401-450</li>
                     </Link>
 
-                    <Link to="../Top500_9">
+                    <Link to="../Top50010">
                         <li className="top500--li">451-500</li>
                     </Link>
 
