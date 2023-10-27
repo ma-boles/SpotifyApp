@@ -9,8 +9,8 @@ export default function Decade () {
         <div className="decade--page">
             <div className="decade--header">
                 <nav className="decade--nav">
-                    <img src={left} className='decade--arrowLeft'></img>
-                    <img src={right} className='decade--arrowRight'></img>
+                    <img src={left} className='decade--arrowLeft' alt="back"></img>
+                    <img src={right} className='decade--arrowRight' alt="next"></img>
                 </nav>
                 <h1 className="h1--decade">
                     Decade

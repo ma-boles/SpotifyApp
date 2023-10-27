@@ -67,7 +67,7 @@ export default function Nav() {
 
                     <div className="line--collection">
                         <img src={expand} className='img--icon--coll' id="collection" 
-                        onClick={toggleVisibility}></img>
+                        onClick={toggleVisibility} alt="complete collection"></img>
                         <li id="li--coll" className={areElementsHidden ? 'hidden': '' }>Collection</li>
                     </div>
 
@@ -79,25 +79,25 @@ export default function Nav() {
 
                     <div className='line--item'>
                         <Link to="./Genre">
-                            <img src={genre} className='img--icon'alt='genre'></img><li id='genre' className={areElementsHidden ? 'hidden': ''}>Genre</li>
+                            <img src={genre} className='img--icon' alt='genre'></img><li id='genre' className={areElementsHidden ? 'hidden': ''}>Genre</li>
                         </Link>  
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Decade">
-                            <img src={decade} className='img--icon'alt='decade'></img><li id='decade' className={areElementsHidden ? 'hidden': ''}>Decade</li>
+                            <img src={decade} className='img--icon' alt='decade'></img><li id='decade' className={areElementsHidden ? 'hidden': ''}>Decade</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Login">
-                    <img src={artist} className='img--icon'alt='artist'></img><li id='artist' className={areElementsHidden ? 'hidden': ''}>Artist</li>
+                    <img src={artist} className='img--icon' alt='artist'></img><li id='artist' className={areElementsHidden ? 'hidden': ''}>Artist</li>
                         </Link>
                     </div>
 
                     <div className='line--item'>
                         <Link to="./Podcasts"> 
-                            <img src={podcast} className='img--icon'alt='podcast'></img><li id='podcast' className={areElementsHidden ? 'hidden': ''}>Podcast</li>
+                            <img src={podcast} className='img--icon' alt='podcast'></img><li id='podcast' className={areElementsHidden ? 'hidden': ''}>Podcast</li>
                         </Link>  
                     </div>
                 </ul>
@@ -129,39 +129,39 @@ export default function Nav() {
 
                         <div className='line--tablet'>
                             <Link to="./Genre">
-                                <img src={genre} className='img--tablet'alt='genre'></img><li id='genre--tablet'>Genre</li>
+                                <img src={genre} className='img--tablet' alt='genre'></img><li id='genre--tablet'>Genre</li>
                             </Link>  
                         </div>
 
                         <div className='line--tablet'>
                             <Link to="./Decade">
-                                <img src={decade} className='img--tablet'alt='decade'></img><li id='decade--tablet'>Decade</li>
+                                <img src={decade} className='img--tablet' alt='decade'></img><li id='decade--tablet'>Decade</li>
                             </Link>
                         </div>
 
                         <div className='line--tablet'>
                             <Link to="./Login">
-                        <img src={artist} className='img--tablet'alt='artist'></img><li id='artist--tablet'>Artist</li>
+                        <img src={artist} className='img--tablet' alt='artist'></img><li id='artist--tablet'>Artist</li>
                             </Link>
                         </div>
 
                         <div className='line--tablet'>
                             <Link to="./Podcasts"> 
-                                <img src={podcast} className='img--tablet'alt='podcast'></img><li id='podcast--tablet'>Podcast</li>
+                                <img src={podcast} className='img--tablet' alt='podcast'></img><li id='podcast--tablet'>Podcast</li>
                             </Link>  
                         </div>
                     </div>
 
                     <div className="nowPlaying--tablet">
-                        <img src={album} id="album--tablet">
+                        <img src={album} id="album--tablet" alt="album cover">
                         </img>
                         <h4 className="h4--tablet">Album Title</h4>
                         <p className="p--tablet">Artist Name</p>
                         <hr className="hr--tablet"/>
                         <div className="musicPlayer--tablet">
-                            <img src={back} id="img--musicPlayer--tablet"></img>
-                            <img src={play} id="img--musicPlayer--tablet"></img>
-                            <img src={forward} id="img--musicPlayer--tablet"></img>
+                            <img src={back} id="img--musicPlayer--tablet" alt="skip back"></img>
+                            <img src={play} id="img--musicPlayer--tablet" alt="play"></img>
+                            <img src={forward} id="img--musicPlayer--tablet" alt="skip forward"></img>
 
                         </div>
                 </div>

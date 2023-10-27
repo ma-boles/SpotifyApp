@@ -10,7 +10,7 @@ export default function Login() {
         <section className="login">
 
             <Link to="/LoginCard">
-            <img src={LogoGreen} className="logo--green"></img>
+            <img src={LogoGreen} className="logo--green" alt="logo"></img>
             </Link>
 
         </section>

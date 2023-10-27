@@ -11,7 +11,7 @@ export default function LoginCard({ closeModal }) {
     return(
         <div className="login--modal" id="login--modal">
             <section className="login--card" id="login--card">
-                <img src={Logo} className="login--img"></img>
+                <img src={Logo} className="login--img" alt="logo"></img>
                 <h2 className="login--h2">Log in for full experience.</h2>
                 <div>
                 <input placeholder="Email or username" type="text"></input>

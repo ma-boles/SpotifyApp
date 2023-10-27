@@ -5,7 +5,7 @@ import Modal from "../components/Modal";
 import LoginCard from "../components/LoginCard";
 
 import HeaderImg from "../images/HomeLogo.jpg";
-import Logo from "../images/Spotify_Logo_RGB_White.png";
+/*import Logo from "../images/Spotify_Logo_RGB_White.png";*/
 
 import "../styles/HomePage.css";
 import "../styles/Login.css";
@@ -67,7 +67,7 @@ export default function HomePage({ accessToken }) {
         <section className='homePage'>
             <div className="home">
 
-            <img src={HeaderImg} style={styles}></img>
+            <img src={HeaderImg} style={styles} alt="website logo"></img>
 
             </div>
 

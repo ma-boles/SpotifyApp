@@ -21,8 +21,8 @@ export default function Search() {
                     </Link>
           </div>
             <nav className="search--nav">
-                    <img src={left} className='search--arrowLeft'></img>
-                    <img src={right} className='search--arrowRight'></img>
+                    <img src={left} className='search--arrowLeft' alt="back"></img>
+                    <img src={right} className='search--arrowRight' alt="next"></img>
                     <input className="search--input" placeholder="What do you want to listen to?">
                         </input>
                 </nav>
