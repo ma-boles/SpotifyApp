@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3001;
+const fetch = require('node-fetch');
 
 app.use(express.json()); //parse json request bodies
 
@@ -12,7 +13,7 @@ app.post('/authenticate', (req, res) => {
 
     //headers for POST request
     const headers = {
-        'Authorization': 'Basic ' + btoa(`${CLIENT_ID}:${CLIENT_SECRET}`),
+        'Authorization': 'Basic ' + Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64'),
         'Content-Type': 'application/x-www-form-urlencoded'
     };
 
