@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 export default function Authentication({ onTokenObtained }) {
 
@@ -6,7 +6,7 @@ export default function Authentication({ onTokenObtained }) {
         const CLIENT_ID = '';
         const CLIENT_SECRET = '';
 
-        const tokenUrl = "https://accounts.spotify.com/api/token";
+        const tokenUrl = "http://localhost:3001/authenticate";
 
         //headers for POST request
         const headers = {
@@ -23,9 +23,9 @@ export default function Authentication({ onTokenObtained }) {
             headers,
             body
         })
-        .then((response) => response.JSON())
-        .then((data) => {
-            const token = data.access.token;
+        .then(response => response.json())
+        .then(data => {
+            const token = data.token;
             onTokenObtained(token); //passes token to parent component
         })
         .catch((error) => {
