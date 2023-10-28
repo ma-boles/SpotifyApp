@@ -1,8 +1,14 @@
-const express = require('express');
+/*const express = require('express');
+const cors = require('cors');
+const fetch = require('node-fetch');
+*/
+import express from 'express';
+import cors from 'cors';
+import { default as fetch } from 'node-fetch';
 const app = express();
 const port = process.env.PORT || 3001;
-const fetch = require('node-fetch');
 
+app.use(cors()); //enable CORS for all routes
 app.use(express.json()); //parse json request bodies
 
 app.post('/authenticate', (req, res) => {
@@ -40,3 +46,5 @@ app.post('/authenticate', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+
