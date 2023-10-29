@@ -15,11 +15,11 @@ export default function HomePage({ accessToken }) {
     const [ albumData, setAlbumData ] = useState([]);
 
     useEffect(() => {
-      const albumIds = ['2v6ANhWhZBUKkg6pJJBs3B'/*, '2CNEkSE8TADXRT2AzcEt1b', /*'Blue - Joni Mitchell','6YUCc2RiXcEKS9ibuZxjt0','0ETFjACtuP2ADo6LFhL6HN','2guirTSEqLizK7j9i1MTTZ','1bt6q2SruMsBtcerNVtpZB','7nXJ5k4XgRj5OLg9m8V3zc','4WD4pslu83FF6oMa1e19mF','1BZoqf8Zje5nGdwZhOjAtD'*/]; //album ids from api
+      const albumIds = ['2v6ANhWhZBUKkg6pJJBs3B','2CNEkSE8TADXRT2AzcEt1b'/*, 'Blue - Joni Mitchell'*/,'6YUCc2RiXcEKS9ibuZxjt0','0ETFjACtuP2ADo6LFhL6HN','2guirTSEqLizK7j9i1MTTZ','1bt6q2SruMsBtcerNVtpZB','7nXJ5k4XgRj5OLg9m8V3zc','4WD4pslu83FF6oMa1e19mF','1BZoqf8Zje5nGdwZhOjAtD']; //album ids from api
 
-      const fetchDataForAlbum = async (albumIds) => {
+      const fetchDataForAlbum = async (albumId) => {
         try {
-          const response = await fetch(`https://api.spotify.com/v1/albums/${albumIds}`, {
+          const response = await fetch(`https://api.spotify.com/v1/albums/${albumId}`, {
             headers: {
               'Authorization': `Bearer ${accessToken}`,
             },
@@ -27,19 +27,25 @@ export default function HomePage({ accessToken }) {
           
           if(response.status === 200) {
             const data = await response.json();
-            setAlbumData((prevData) =>[...prevData, data]);
+            return data;
           } else {
             console.error('Error fetching album data');
+            return null;
           }
         } catch(error) {
           console.error('Error:', error);
+          return null;
         }
       };
 
-      //fetch data for each album id
-      albumIds.forEach((albumId) => {
-        fetchDataForAlbum(albumId);
-      });
+      // fetch data for all albums at same time using Promise.all
+      const fetchAlbums = async () => {
+        const albumPromises = albumIds.map((albumId) => fetchDataForAlbum(albumId));
+        const albumResults = await Promise.all(albumPromises);
+        setAlbumData(albumResults.filter((data) => data !== null));
+      };
+      
+      fetchAlbums();
     }, [accessToken]);
 
 
