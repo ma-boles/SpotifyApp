@@ -3,6 +3,7 @@ import "../styles/Top500.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
+import Links from "../components/Links";
 
 export default function Top50023 () {
     return (
@@ -49,7 +50,10 @@ export default function Top50023 () {
                 <Album />
 
             </div>
-            <div className="top500--links">
+
+                <Links />
+
+            {/*<div className="top500--links">
                 <ul className="top500--ul">
 
                     <Link to="../Top500">
@@ -91,7 +95,8 @@ export default function Top50023 () {
                         <li className="top500--li--current">451-500</li>
                     
                 </ul>
-            </div>
+    </div>*/}
+
             <hr></hr>
             
         </div>
