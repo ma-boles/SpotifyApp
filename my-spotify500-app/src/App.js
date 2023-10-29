@@ -21,6 +21,23 @@ import Top5007 from './500pages/Top5007';
 import Top5008 from './500pages/Top5008';
 import Top5009 from './500pages/Top5009';
 import Top50010 from './500pages/Top50010';
+import Top50011 from './500pages/Top50011';
+import Top50012 from './500pages/Top50012';
+import Top50013 from './500pages/Top50013';
+import Top50014 from './500pages/Top50014';
+import Top50015 from './500pages/Top50015';
+import Top50016 from './500pages/Top50016';
+import Top50017 from './500pages/Top50017';
+import Top50018 from './500pages/Top50018';
+import Top50019 from './500pages/Top50019';
+import Top50020 from './500pages/Top50020';
+import Top50021 from './500pages/Top50021';
+import Top50022 from './500pages/Top50022';
+import Top50023 from './500pages/Top50023';
+import Top50024 from './500pages/Top50024';
+import Top50025 from './500pages/Top50025';
+
+
 
 
 import MusicPlayer from './components/Music-player';
@@ -76,6 +93,22 @@ export default function App() {
             <Route path='/Top5008' element={<Top5008 />}/>
             <Route path='/Top5009' element={<Top5009 />}/>
             <Route path='/Top50010' element={<Top50010 />}/>
+            <Route path='/Top50011' element={<Top50011 />}/>
+            <Route path='/Top50012' element={<Top50012 />}/>
+            <Route path='/Top50013' element={<Top50013 />}/>
+            <Route path='/Top50014' element={<Top50014 />}/>
+            <Route path='/Top50015' element={<Top50015 />}/>
+            <Route path='/Top50016' element={<Top50016 />}/>
+            <Route path='/Top50017' element={<Top50017 />}/>
+            <Route path='/Top50018' element={<Top50018 />}/>
+            <Route path='/Top50019' element={<Top50019 />}/>
+            <Route path='/Top50020' element={<Top50020 />}/>
+            <Route path='/Top50021' element={<Top50021 />}/>
+            <Route path='/Top50022' element={<Top50022 />}/>
+            <Route path='/Top50023' element={<Top50023 />}/>
+            <Route path='/Top50024' element={<Top50024 />}/>
+            <Route path='/Top50025' element={<Top50025 />}/>
+
           </Routes>
 
           <Footer />
