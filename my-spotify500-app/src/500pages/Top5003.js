@@ -4,7 +4,7 @@ import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
 
-export default function Top5007 () {
+export default function Top5003 () {
     return (
         <>
         <div className="top500--page">
@@ -48,45 +48,6 @@ export default function Top5007 () {
                 <Album />                
                 <Album />
 
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-
             </div>
             <div className="top500--links">
                 <ul className="top500--ul">
@@ -99,9 +60,9 @@ export default function Top5007 () {
                         <li className="top500--li">51-100</li>
                     </Link>
 
-                    <Link to="../Top5003">
-                        <li className="top500--li">101-150</li>
-                    </Link>
+                    
+                        <li className="top500--li--current">101-150</li>
+                  
 
                     <Link to="../Top5004">
                         <li className="top500--li">151-200</li>
@@ -115,8 +76,10 @@ export default function Top5007 () {
                         <li className="top500--li">251-300</li>
                     </Link>
 
-                        <li className="top500--li--current">301-350</li>
-                
+                    <Link to="../Top5007">
+                        <li className="top500--li">301-350</li>
+                    </Link>
+
                     <Link to="../Top5008">
                         <li className="top500--li">351-400</li>
                     </Link>

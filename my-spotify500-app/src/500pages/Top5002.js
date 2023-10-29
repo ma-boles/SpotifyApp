@@ -48,44 +48,6 @@ export default function Top5002 () {
                 <Album />                
                 <Album />
 
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
 
             </div>
             <div className="top500--links">
