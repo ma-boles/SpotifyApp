@@ -52,7 +52,7 @@ import left from "../images/chevron-left-solid.svg"*/
 
 export default function App() {
 
-  const [ accessToken, setAccessToken ] = useState('initil_access_token');
+  const [ accessToken, setAccessToken ] = useState('initial_access_token');
 
   /*const refreshAccessToken = async () => {
 
