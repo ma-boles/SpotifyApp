@@ -16,13 +16,16 @@
     margin-right: 14px;
     margin-bottom: 5px;
     color: whitesmoke;
+    font-size: 1.4rem;
 }
 
 .album--h3 {
     margin-top: 0;
     margin-left: 14px;
     margin-right: 14px;
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 1rem;
+    color: whitesmoke;
 }
 
 /* mobile screens */
