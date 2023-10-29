@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-/*import Album from "./Album";*/
 
-export default function useAlbumFetcher ({ accessToken, albumIds })  {
+
+export function useAlbumFetcher ({ accessToken, albumIds })  {
 
     const [ albumData, setAlbumData ] = useState([]);
     
@@ -41,9 +41,3 @@ export default function useAlbumFetcher ({ accessToken, albumIds })  {
 
     return albumData;
 }
-
-{/*<>
-        {albumData.map((album, index) => ( 
-              <Album key={index} albumData={album}/>
-            ))}
-        </>*/}
