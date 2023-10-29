@@ -39,7 +39,7 @@ export default function Album ({ albumData }) {
             <img style={styles} src={albumData.images[0].url} alt={album.name} classname="album--cover" ></img>
             <div className="album--info">
                 <h2 className="album--h2">{albumData.name}</h2>
-                <h3 className="album--h3">{albumData.release_date} ・ {albumData.artists[0].name}</h3>
+                <h3 className="album--h3">{new Date(albumData.release_date).getFullYear()} ・ {albumData.artists[0].name}</h3>
             </div>
         </div>
         )
