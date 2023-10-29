@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 
 import Authentication from './components/Authentication';
-import Top500 from "../src/pages/Top500";
+import Top500 from "./500pages/Top500";
 import Decade from "../src/pages/Decade";
 import Genre from "../src/pages/Genre";
 import Podcasts from "../src/pages/Podcasts";
@@ -12,15 +12,15 @@ import Search from './pages/Search';
 /*import LoginPage from './pages/LoginPage';*/
 import MobileSearch from './pages/MobileSearch';
 
-import Top5002 from './pages/Top5002';
-import Top5003 from './pages/Top5003';
-import Top5004 from './pages/Top5004';
-import Top5005 from './pages/Top5005';
-import Top5006 from './pages/Top5006';
-import Top5007 from './pages/Top5007';
-import Top5008 from './pages/Top5008';
-import Top5009 from './pages/Top5009';
-import Top50010 from './pages/Top50010';
+import Top5002 from './500pages/Top5002';
+import Top5003 from './500pages/Top5003';
+import Top5004 from './500pages/Top5004';
+import Top5005 from './500pages/Top5005';
+import Top5006 from './500pages/Top5006';
+import Top5007 from './500pages/Top5007';
+import Top5008 from './500pages/Top5008';
+import Top5009 from './500pages/Top5009';
+import Top50010 from './500pages/Top50010';
 
 
 import MusicPlayer from './components/Music-player';
