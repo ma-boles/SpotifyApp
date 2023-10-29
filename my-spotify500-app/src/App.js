@@ -37,9 +37,6 @@ import Top50023 from './500pages/Top50023';
 import Top50024 from './500pages/Top50024';
 import Top50025 from './500pages/Top50025';
 
-
-
-
 import MusicPlayer from './components/Music-player';
 import Nav from './components/Nav';
 import NowPlaying from './components/NowPlaying';
@@ -66,7 +63,7 @@ export default function App() {
     <>
     {/* access token */}
     <Authentication onTokenObtained={handleTokenObtained}/>
-
+    
     <div className="App">
 
           <Nav />
