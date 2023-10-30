@@ -29,8 +29,8 @@ export default function Top5006 ({ accessToken }) {
 
             <div className="top500">
 
-            {/*<AlbumDisplay />*/
-}                {albumData.map((album, index) => ( 
+            {/*<AlbumDisplay />*/}
+                {albumData.map((album, index) => ( 
               <Album key={index} albumData={album}/>
             ))}
 

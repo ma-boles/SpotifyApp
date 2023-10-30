@@ -3,9 +3,15 @@ import "../styles/Top500.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
+import { useAlbumFetcher } from "../components/useAlbumFetcher";
+/*import AlbumDisplay from "../components/AlbumDisplay";*/
 import Links from "../components/Links";
 
-export default function Top5007 () {
+export default function Top5007 ({ accessToken }) {
+
+    const albumIds = ['4RLIesiAVONV4fOUlOSmr4', '3nJnyDV8fwFpffo0EyHQto', '58MQ0PLijVHePUonQlK76Y', '5n52kyQKeUZs5ObZJejLQd', '1kmyirVya5fRxdjsPFDM05', '4jovLVRCu6H0Ce6NHR4eTZ', '4j4w5DDWMKD7ePStAl19OF', '7HVoV2lgVsmuiHsjbbUJB4', '5Dbax7G8SWrP9xyzkOvy2F', '34MHuXONazzgSxI0cThpAg', '3539EbNgIdEDGBKkUf4wno', '6zIYEv6soMoaZiypsHB5dd'/*, Joni Mitchell - Hejira*/, '18XFe4CPBgVezXkxZP6rTb', '5vBZRYu2GLA65nfxBvG1a7', '3ywVzrwMQ3Kq43N9zBdBQm', '0Lg1uZvI312TPqxNWShFXL', '5MzwGwnO9gkh0z6Nl4FF8h', '6r7LZXAVueS5DqdrvXJJK7', '39kLAVdcgW7jbMcTEaY2qy']; //album ids from api
+    const albumData = useAlbumFetcher({ accessToken, albumIds });
+
     return (
         <>
         <div className="top500--page">
@@ -23,7 +29,12 @@ export default function Top5007 () {
 
             <div className="top500">
 
-                <Album />                
+            {/*<AlbumDisplay />*/}
+                {albumData.map((album, index) => ( 
+              <Album key={index} albumData={album}/>
+            ))}
+
+                {/*<Album />                
                 <Album />
                 <Album />                
                 <Album />
@@ -47,7 +58,7 @@ export default function Top5007 () {
                 <Album />                
                 <Album />
                 <Album />                
-                <Album />
+                <Album />*/}
 
             </div>
 
