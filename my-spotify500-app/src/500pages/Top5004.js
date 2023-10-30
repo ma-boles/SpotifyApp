@@ -4,8 +4,15 @@ import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
 import Links from "../components/Links";
+import { useAlbumFetcher } from "../components/useAlbumFetcher";
+/*import AlbumDisplay from "../components/AlbumDisplay";*/
 
-export default function Top5004 () {
+
+export default function Top5004 ({ accessToken }) {
+
+    const albumIds = ['3miZDfDnP7SmOXAJXWdFmz', '28yHV3Gdg30AiB8h8em1eW', '1hOK2ey9W76x9GnftSRgrw', '2tm3Ht61kqqRZtIYsBjxEj', '0B6BbyElOe4bwziJrunOTe', '7Eoz7hJvaX1eFkbpQxC5PA', '3YPK0bNOuayhmSrs0sIIBR', '5G5UwqPsxDKpxJLX4xsyuh', '09AwlP99cHfKVNKv4FC8VW', '0Y7qkJVZ06tS2GUCDptzyW', '2mBbV0Ad6B4ydHMZlzAY7S'/*, Neil Young - Harvest*/, '3GH4IiI6jQAIvnHVdb5FB6', '4Uv86qWpGTxf7fU7lG5X6F', '7lEOKZaOpqP70UYqdLPejG', '5ljIGCRRvS48V4ADzPGav2', '5mQnSrc0cFV6greyhJJIR6'/*, Elvis Presley - The Sun Sessions*/, '3mH6qwIy9crq0I9YQbOuDf', '5fxYu3rqjCNTSPKN8mtEl2' ]; //album ids from api
+    const albumData = useAlbumFetcher({ accessToken, albumIds });
+
     return (
         <>
         <div className="top500--page">
@@ -23,7 +30,12 @@ export default function Top5004 () {
 
             <div className="top500">
 
-                <Album />                
+            {/*<AlbumDisplay />*/
+}                {albumData.map((album, index) => ( 
+              <Album key={index} albumData={album}/>
+            ))}
+
+                {/*<Album />                
                 <Album />
                 <Album />                
                 <Album />
@@ -47,7 +59,7 @@ export default function Top5004 () {
                 <Album />                
                 <Album />
                 <Album />                
-                <Album />
+                <Album />*/}
 
             </div>
 

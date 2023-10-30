@@ -4,8 +4,14 @@ import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
 import Links from "../components/Links";
+import { useAlbumFetcher } from "../components/useAlbumFetcher";
+/*import AlbumDisplay from "../components/AlbumDisplay";*/
 
-export default function Top5005 () {
+export default function Top5005 ({ accessToken }) {
+
+    const albumIds = ['2UJwKSBUz6rtW4QLK74kQu', '29f2cOueckYE8Nc1pkJjrU', '14UrtAcLym4a6f7IgXVGjF', '6mUdeDZCsExyJLMdAfDuwh', '0DFYbYCcHCEJPcN1hODG6K', '1jWmEhn3ggaL6isoyLfwBn', '3Q0zkOZEOC855ErOOJ1AdO', '6fQElzBNTiEMGdIeY0hy5l', '3qr4pTBWEU1SVf01j6RAx3'/*, Neil Young - After the Gold Rush*/, '4KT6G8fj8EEIfsyr75hbgc', '3uFZf8rykoHo7XMIQVYW6r', '6UkdyvPElK6JDkyeRClbI2', '5qhXaVIC5BdE4a5Kq1FMZG', '6X1x82kppWZmDzlXXK3y3q', '0BiNb8HYR4JvuxUa31Z58Q', '5gzLOflH95LkKYE6XSXE9k', '3iC6dJobZulVXp0F4Bojig', '1EoDsNmgTLtmwe1BDAVxV5', '0ky5kdvfPxSmSpj03hpSAE']; //album ids from api
+    const albumData = useAlbumFetcher({ accessToken, albumIds });
+
     return (
         <>
         <div className="top500--page">
@@ -23,7 +29,11 @@ export default function Top5005 () {
 
             <div className="top500">
 
-                <Album />                
+            {/*<AlbumDisplay />*/
+}                {albumData.map((album, index) => ( 
+              <Album key={index} albumData={album}/>
+            ))}
+                {/*<Album />                
                 <Album />
                 <Album />                
                 <Album />
@@ -47,7 +57,7 @@ export default function Top5005 () {
                 <Album />                
                 <Album />
                 <Album />                
-                <Album />
+                <Album />*/}
 
             </div>
 
