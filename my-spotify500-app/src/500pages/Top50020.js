@@ -9,7 +9,7 @@ import Links from "../components/Links";
 
 export default function Top50020 ({ accessToken }) {
 
-    const albumIds = [''] //album ids from api
+    const albumIds = ['3THuBNp86ScbTXwpTmAbdw', '79dL7FLiJFOO0EoehUHQBv', '49MNmJhZQewjt06rpwp6QR', '0YgkR96bK9JSHcj236W9ZK', '3SBh2kzao9z3gLCzOV45ho', '5fMlysqhFE0itGn4KezMBW', '5vkqYmiPBYLaalcmjujWxK', '0k5C3Z7w7uQpyGFQEzl7yB', '43iBTEWECK7hSnE0p6GgNo', '50j4Wm1b9hLpSpPIA39Vp9', '2VQFbPduHKk3SAyczWfpok', '2UCdfQEDgzWtbzpaD4Mo47', '2QJmrSgbdM35R67eoGQo4j', '3zgDLoVcpVGfFbDZJf3uHI', '5Hfbag0SsHxafx1SySFSX6', '3fRCOoTbBsOITBWlCRCJQr', '0S0KGZnfBGSIssfF54WSJh', '190Tx9jPHndq0qUlq79BJJ', '4Uc6YCjpfyjj02rZfg2EUv', '1L4HE00En7eNK74voVZums'] //album ids from api
     const albumData = useAlbumFetcher({ accessToken, albumIds })
 
     return (
