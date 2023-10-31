@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+/**/import { Link } from "react-router-dom";
 import "../styles/Top500.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
