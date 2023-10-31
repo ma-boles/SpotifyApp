@@ -3,9 +3,15 @@ import "../styles/Top500.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
+import { useAlbumFetcher } from "../components/useAlbumFetcher";
+/*import AlbumDisplay from "../components/AlbumDisplay";*/
 import Links from "../components/Links";
 
-export default function Top50015 () {
+export default function Top50015 ({ accessToken }) {
+
+    const albumIds = ['3EfpOFKjotrMQTFTnxrXaB', '3GmwKB1tgPZgXeRJZSm9WX', '58GjBhQvLHwfQFJtdP9Oxg', '40Wi0Ej08sw9B4URIOabOI', '0NJYYhhvOATAkUipSJEBDb', '0fLhefnjlIV3pGNF9Wo8CD', '0pkrqPjeq9K5KD0hFqAKNa', '5BPCP7WSGBG4br2o4WRmd8', '2Ul7B1LEHxXzYubtkTMENs', '1UsmQ3bpJTyK6ygoOOjG1r', '283NWqNsCA9GwVHrJk59CG', '3REUXdj5OPKhuDTrTtCBU0', '57F44c0MTziVzHPEuJtH9A', '1xpGyKyV26uPstk1Elgp9Q', '4m2880jivSbbyEGAKfITCa'/*, Neil Young & Crazy Horse - Rust Never Sleeps*/, '2ikq6LspaBbUG2qyiV5qdx', '5d71Imt5CIb7LpQwDMQ093', '7njGz7ZeDXL6cH3VnflcQ2', '4UMe0Ods7kygK6OISasZe9'] //album ids from api
+    const albumData = useAlbumFetcher({ accessToken, albumIds })
+
     return (
         <>
         <div className="top500--page">
@@ -23,7 +29,12 @@ export default function Top50015 () {
 
             <div className="top500">
 
-                <Album />                
+            {/*<AlbumDisplay />*/}
+                {albumData.map((album, index) => ( 
+              <Album key={index} albumData={album}/>
+            ))}
+
+                {/*<Album />                
                 <Album />
                 <Album />                
                 <Album />
@@ -47,7 +58,7 @@ export default function Top50015 () {
                 <Album />                
                 <Album />
                 <Album />                
-                <Album />
+                <Album />*/}
 
             </div>
 
