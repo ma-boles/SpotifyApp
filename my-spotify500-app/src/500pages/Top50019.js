@@ -3,9 +3,15 @@ import "../styles/Top500.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
+import { useAlbumFetcher } from "../components/useAlbumFetcher";
+/*import AlbumDisplay from "../components/AlbumDisplay";*/
 import Links from "../components/Links";
 
-export default function Top50019 () {
+export default function Top50019 ({ accessToken }) {
+
+    const albumIds = ['0FZK97MXMm5mUQ8mtudjuK', '1B4oPgG5ljWTRxsKcTHAYn', '4q1HNSka8CzuLvC8ydcsD2', '39jsLMRmrTpfdq2vE4TCUe', '19bQiwEKhXUBJWY6oV3KZk', '4ldiyfqRvKiIasHHuDftuP', '0ptlfJfwGTy0Yvrk14JK1I', '4RzYS74QxvpqTDVwKbhuSg', '1cCAb1vN8uUsdfEylVmTLs', '7slHgsEMuJfnuft5LAPyw6'/*, The Temptations - Anthology*/, '2rogKfOpmCFuqNhtGKf2dX', '71rxIr6MJYUzDG9ge6Jq3J', '2IWaNq5o4tG1w6yxve5BMU', '4uG8q3GPuWHQlRbswMIRS6', '0vVekV45lOaVKs6RZQQNob', '0EabZMx74C2wyXhvMMO1eI', '05n0d2kfwGPhKpTonLHRpY', '2xg7iIKoSqaDNpDbJnyCjY', '4Z8nWz3dGybOP7lhMZpcOo' ] //album ids from api
+    const albumData = useAlbumFetcher({ accessToken, albumIds })
+
     return (
         <>
         <div className="top500--page">
@@ -23,7 +29,12 @@ export default function Top50019 () {
 
             <div className="top500">
 
-                <Album />                
+            {/*<AlbumDisplay />*/}
+                {albumData.map((album, index) => ( 
+              <Album key={index} albumData={album}/>
+            ))}
+
+                {/*<Album />                
                 <Album />
                 <Album />                
                 <Album />
@@ -47,7 +58,7 @@ export default function Top50019 () {
                 <Album />                
                 <Album />
                 <Album />                
-                <Album />
+                <Album />*/}
 
             </div>
 

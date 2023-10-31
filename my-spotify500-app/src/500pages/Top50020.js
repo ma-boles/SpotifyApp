@@ -3,9 +3,15 @@ import "../styles/Top500.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
+import { useAlbumFetcher } from "../components/useAlbumFetcher";
+/*import AlbumDisplay from "../components/AlbumDisplay";*/
 import Links from "../components/Links";
 
-export default function Top50020 () {
+export default function Top50020 ({ accessToken }) {
+
+    const albumIds = [''] //album ids from api
+    const albumData = useAlbumFetcher({ accessToken, albumIds })
+
     return (
         <>
         <div className="top500--page">
@@ -23,7 +29,12 @@ export default function Top50020 () {
 
             <div className="top500">
 
-                <Album />                
+            {/*<AlbumDisplay />*/}
+                {albumData.map((album, index) => ( 
+              <Album key={index} albumData={album}/>
+            ))}
+
+                {/*<Album />                
                 <Album />
                 <Album />                
                 <Album />
@@ -47,7 +58,7 @@ export default function Top50020 () {
                 <Album />                
                 <Album />
                 <Album />                
-                <Album />
+                <Album />*/}
 
             </div>
 
