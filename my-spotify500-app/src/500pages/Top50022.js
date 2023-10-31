@@ -3,9 +3,15 @@ import "../styles/Top500.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Album from "../components/Album";
+import { useAlbumFetcher } from "../components/useAlbumFetcher";
+/*import AlbumDisplay from "../components/AlbumDisplay";*/
 import Links from "../components/Links";
 
-export default function Top50022 () {
+export default function Top50022 ({ accessToken }) {
+
+    const albumIds = ['7CzEknt9gJwe0QC89ir1JX', '1oIICL75sMuInkEhX8jj3b', '3V18DIKvRuwdxc2LE4wuac', '1Pus5h1qGedCn4CtOuPVtp', '7npBPiCHjPj8PVIGPuHXep', '63498KErJdRts4KWrgv2dT', '1hryVGXoRLV9WAhO97xEDJ', '2eOu9QDLP2MoO04ZtII2Vm', '4Jw0RycAqlXeAoymbc0CYp', '1aucGNKimhgARC7iO2xLt2', '5dl01XDIMXrmjJ22obqfhQ', '1RM6MGv6bcl6NrAG8PGoZk', '1R8kkopLT4IAxzMMkjic6X', '1XFNz6KIvLyIsLFOiLRKqP', '0p5QwhEke5P9mFY4CY9u4j', '78iX7tMceN0FsnmabAtlOC', '4TECsw2dFHZ1ULrT7OA3OL', '0YS25Dr3hMtMFlVTfuvzl4', '3CVie3TkZ0VHgT6mlwy7cp', '2SayIIdZkrtb9I4BbdnyOr'] //album ids from api
+    const albumData = useAlbumFetcher({ accessToken, albumIds })
+
     return (
         <>
         <div className="top500--page">
@@ -23,7 +29,12 @@ export default function Top50022 () {
 
             <div className="top500">
 
-                <Album />                
+            {/*<AlbumDisplay />*/}
+                {albumData.map((album, index) => ( 
+              <Album key={index} albumData={album}/>
+            ))}
+
+                {/*<Album />                
                 <Album />
                 <Album />                
                 <Album />
@@ -47,7 +58,7 @@ export default function Top50022 () {
                 <Album />                
                 <Album />
                 <Album />                
-                <Album />
+                <Album />*/}
 
             </div>
 
