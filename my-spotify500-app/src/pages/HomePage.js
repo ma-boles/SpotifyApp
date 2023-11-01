@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAlbumFetcher } from "../components/useAlbumFetcher";
-import Album from "../components/Album";
-/*import AlbumDisplay from "../components/AlbumDisplay";*/
+/*import Album from "../components/Album";*/
+import AlbumDisplay from "../components/AlbumDisplay";
 import Modal from "../components/Modal";
 import LoginCard from "../components/LoginCard";
 
@@ -58,10 +58,11 @@ export default function HomePage({ accessToken }) {
           </div>
 
           <div className="top10">
-{            /*<AlbumDisplay />*/
-}            {albumData.map((album, index) => ( 
+            
+            <AlbumDisplay albumData={albumData}/>
+            {/*albumData.map((album, index) => ( 
               <Album key={index} albumData={album}/>
-            ))}
+))*/}
           </div>
 
       </section>
