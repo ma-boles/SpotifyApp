@@ -40,7 +40,7 @@ export default function Nav() {
     return(
         <>
          {/* STATIC NAV SIDEBAR */}
-         <side className="side" style={{
+         <div className="side" style={{
             width: sideSize,
             height: '100%'
          }}>
@@ -102,7 +102,7 @@ export default function Nav() {
                     </div>
                 </ul>
             </nav>
-        </side>
+        </div>
 
         <div className="tablet--nav">
             <nav>
