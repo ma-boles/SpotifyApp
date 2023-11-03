@@ -12,7 +12,7 @@ import Search from './pages/Search';
 /*import LoginPage from './pages/LoginPage';*/
 import MobileSearch from './pages/MobileSearch';
 
-import Top5002 from './500pages/Top5002';
+/*import Top5002 from './500pages/Top5002';
 import Top5003 from './500pages/Top5003';
 import Top5004 from './500pages/Top5004';
 import Top5005 from './500pages/Top5005';
@@ -35,7 +35,7 @@ import Top50021 from './500pages/Top50021';
 import Top50022 from './500pages/Top50022';
 import Top50023 from './500pages/Top50023';
 import Top50024 from './500pages/Top50024';
-import Top50025 from './500pages/Top50025';
+import Top50025 from './500pages/Top50025';*/
 
 import MusicPlayer from './components/Music-player';
 import Nav from './components/Nav';
@@ -82,7 +82,7 @@ export default function App() {
             <Route path='/MobileSearch' element={<MobileSearch/>}/>
 
             <Route path='/Top5002' element={<Top5002 />}/>
-            <Route path='/Top5003' element={<Top5003 />}/>
+            {/*<Route path='/Top5003' element={<Top5003 />}/>
             <Route path='/Top5004' element={<Top5004 />}/>
             <Route path='/Top5005' element={<Top5005 />}/>
             <Route path='/Top5006' element={<Top5006 />}/>
@@ -104,7 +104,7 @@ export default function App() {
             <Route path='/Top50022' element={<Top50022 />}/>
             <Route path='/Top50023' element={<Top50023 />}/>
             <Route path='/Top50024' element={<Top50024 />}/>
-            <Route path='/Top50025' element={<Top50025 />}/>
+  <Route path='/Top50025' element={<Top50025 />}/>*/}
 
           </Routes>
 
