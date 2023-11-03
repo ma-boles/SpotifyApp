@@ -47,7 +47,7 @@ export function useAlbumFetcher ({ accessToken, albumIds })  {
         };
         
         fetchAlbums();
-      }, [accessToken, albumIds]);
+      });
   
 
     return albumData;
