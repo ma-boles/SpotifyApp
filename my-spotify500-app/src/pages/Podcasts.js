@@ -1,7 +1,7 @@
 import "../styles/Podcasts.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
-import Album from "../components/Album";
+import Podcast from "../components/Podcast";
 
 export default function Podcasts () {
     return (
@@ -20,20 +20,12 @@ export default function Podcasts () {
             <h2 className="h2--podcasts">Featured Podcasts</h2>
 
             <div className="podcasts">
-
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-                <Album />                
-                <Album />
-
+                <Podcast />
+                <Podcast />
+                <Podcast />
+                <Podcast />
+                <Podcast />
+                <Podcast />
             </div>
             <hr></hr>
 
