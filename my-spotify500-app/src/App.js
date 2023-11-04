@@ -51,10 +51,6 @@ export default function App() {
 
   const [ accessToken, setAccessToken ] = useState('initial_access_token');
 
-  /*const refreshAccessToken = async () => {
-
-
-  }*/
   const handleTokenObtained = (token) => 
   setAccessToken(token);
 
