@@ -4,7 +4,7 @@ import left from "../images/chevron-left-solid.svg";
 import { useAlbumFetcher } from "../components/useAlbumFetcher";
 import AlbumDisplay from "../components/AlbumDisplay";
 import Links from "../components/Links";
-import { Link } from "react";
+import { Link } from "react-router-dom";
 
 export default function Top50024 ({ accessToken }) {
 
