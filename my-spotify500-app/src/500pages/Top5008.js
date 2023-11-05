@@ -4,6 +4,7 @@ import left from "../images/chevron-left-solid.svg";
 import { useAlbumFetcher } from "../components/useAlbumFetcher";
 import AlbumDisplay from "../components/AlbumDisplay";
 import Links from "../components/Links";
+import { Link } from "react";
 
 export default function Top5008 ({ accessToken }) {
 
@@ -27,6 +28,15 @@ export default function Top5008 ({ accessToken }) {
 
             <div className="top500">
                 <AlbumDisplay albumData={albumData}/>
+            </div>
+
+            <div className="page--nav">
+                <Link to="../Top5007">
+                    <p className="nav--back">BACK</p>
+                </Link>                   
+                <Link to="../Top5009">
+                    <p className="nav--next">NEXT</p>
+                </Link>
             </div>
 
                 <Links />
