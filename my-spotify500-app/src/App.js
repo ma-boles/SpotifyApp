@@ -2,7 +2,7 @@ import '../src/styles/App.css';
 import React, { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 
-import Authentication from './components/Authentication';
+/*import Authentication from './components/Authentication';*/
 import Top500 from "./500pages/Top500";
 import Decade from "../src/pages/Decade";
 import Genre from "../src/pages/Genre";
@@ -12,8 +12,8 @@ import Search from './pages/Search';
 /*import LoginPage from './pages/LoginPage';*/
 import MobileSearch from './pages/MobileSearch';
 
-/*import Top5002 from './500pages/Top5002';
-import Top5003 from './500pages/Top5003';
+import Top5002 from './500pages/Top5002';
+/*import Top5003 from './500pages/Top5003';
 import Top5004 from './500pages/Top5004';
 import Top5005 from './500pages/Top5005';
 import Top5006 from './500pages/Top5006';
@@ -49,16 +49,16 @@ import left from "../images/chevron-left-solid.svg"*/
 
 export default function App() {
 
-  const [ accessToken, setAccessToken ] = useState('initial_access_token');
+  /*const [ accessToken, setAccessToken ] = useState('initial_access_token');
 
   const handleTokenObtained = (token) => 
-  setAccessToken(token);
+  setAccessToken(token);*/
 
 
   return (
     <>
     {/* access token */}
-    <Authentication onTokenObtained={handleTokenObtained}/>
+    {/*<Authentication onTokenObtained={handleTokenObtained}/>*/}
     
     <div className="App">
 
@@ -68,7 +68,7 @@ export default function App() {
         {/* new page loads */}
           <Routes>
           {/* example: <HomePage accessToken={accessToken} /> */}
-            <Route path='/' element={<HomePage  accessToken={accessToken}/>} />
+            <Route path='/' element={<HomePage  /*accessToken={accessToken}*//>} />
             <Route path='/Decade' element={<Decade />} />
             <Route path='/Top500' element={<Top500 />} />
             <Route path='/Genre' element={<Genre />} />

@@ -1,15 +1,15 @@
 import "../styles/Podcasts.css";
-import right from "../images/chevron-right-solid.svg";
+/*import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Podcast from "../components/Podcast";
-import usePodcastData from "../components/usePodcastData";
+import usePodcastData from "../components/usePodcastData";*/
 
-export default function Podcasts ({ podcastId }) {
-    const podcastData = usePodcastData(podcastId);
+export default function Podcasts ({ /*podcastId*/ }) {
+    /*const podcastData = usePodcastData(podcastId);*/
 
     return (
         <>
-        <section className="podcasts--page">
+       {/* <section className="podcasts--page">
             <aside className="div--header">
                 <nav className="podcast--nav">
                     <img src={left} className='podcast--arrowLeft' alt="back"></img>
@@ -32,7 +32,7 @@ export default function Podcasts ({ podcastId }) {
             </div>
             <hr></hr>
 
-        </section>
+    </section>*/}
 
         
         </>
