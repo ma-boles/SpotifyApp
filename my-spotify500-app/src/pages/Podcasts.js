@@ -2,8 +2,11 @@ import "../styles/Podcasts.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import Podcast from "../components/Podcast";
+import usePodcastData from "../components/usePodcastData";
 
-export default function Podcasts () {
+export default function Podcasts ({ podcastId }) {
+    const podcastData = usePodcastData(podcastId);
+
     return (
         <>
         <section className="podcasts--page">

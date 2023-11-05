@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function usePodcastData (podcastId) {
+export default function usePodcastData ({ podcastId }) {
     const [ podcastData, setPodcastData ] = useState(null);
 
     useEffect(() => {
