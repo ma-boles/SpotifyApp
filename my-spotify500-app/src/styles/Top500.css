@@ -95,6 +95,17 @@
     font-size: 1rem;
     margin-left:0px;
 }
+.page--nav {
+    display: flex;
+    justify-content: space-between;
+}
+.nav--back,
+.nav--next {
+    color: whitesmoke;
+    text-decoration: underline;
+    margin: 0rem 1rem;
+    cursor: pointer;
+}
 @media screen and (max-width: 425px) {
     .top500--nav {
         display: none;
