@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-/*export function useAlbumFetcher ({ accessToken, albumIds })  {
+export function useAlbumFetcher ({ accessToken, albumIds })  {
 
     const [ albumData, setAlbumData ] = useState([]);
     
