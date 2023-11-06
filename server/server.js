@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { default as fetch } from 'node-fetch';
-import config from './config';
+import { CLIENT_ID, CLIENT_SECRET } from './config.js'
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -11,8 +11,8 @@ app.use(express.json()); //parse json request bodies
 // authentication 
 app.post('/authenticate', (req, res) => {
     
-    const CLIENT_ID = config.CLIENT_ID;
-    const CLIENT_SECRET = config.CLIENT_SECRET;
+    /*const CLIENT_ID = config.CLIENT_ID;
+    const CLIENT_SECRET = config.CLIENT_SECRET;*/
 
     const tokenUrl = "https://accounts.spotify.com/api/token";
 
