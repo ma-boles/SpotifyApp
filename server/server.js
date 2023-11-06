@@ -1,19 +1,18 @@
-/*const express = require('express');
-const cors = require('cors');
-const fetch = require('node-fetch');
-*/
 import express from 'express';
 import cors from 'cors';
 import { default as fetch } from 'node-fetch';
+import config from './config';
 const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(cors()); //enable CORS for all routes
 app.use(express.json()); //parse json request bodies
 
+// authentication 
 app.post('/authenticate', (req, res) => {
-    const CLIENT_ID = '';
-    const CLIENT_SECRET = '';
+    
+    const CLIENT_ID = config.CLIENT_ID;
+    const CLIENT_SECRET = config.CLIENT_SECRET;
 
     const tokenUrl = "https://accounts.spotify.com/api/token";
 
@@ -46,5 +45,3 @@ app.post('/authenticate', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
-
