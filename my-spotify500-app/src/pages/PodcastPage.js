@@ -1,6 +1,6 @@
 import "../styles/Podcasts.css";
-/*import right from "../images/chevron-right-solid.svg";
-import left from "../images/chevron-left-solid.svg";*/
+import right from "../images/chevron-right-solid.svg";
+import left from "../images/chevron-left-solid.svg";
 import PodcastDisplay from "../components/PodcastDisplay";
 import usePodcastFetcher from "../components/usePodcastFetcher";
 
