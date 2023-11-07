@@ -70,10 +70,10 @@ export default function App() {
             <Route path='/' element={<HomePage  accessToken={accessToken}/>} />
             <Route path='/Decade' element={<Decade />} />
             <Route path='/Genre' element={<Genre />} />
-            <Route path='/Podcasts' element={<Podcasts />} />
+            <Route path='/Podcasts' element={<Podcasts accessToken={accessToken}/>} />
             <Route path='/Search' element={<Search />}/>
          {/*<Route path='/LoginPage' element={<LoginPage />} />*/}
-            <Route path='/MobileSearch' element={<MobileSearch/>}/>
+            <Route path='/MobileSearch' element={<MobileSearch />}/>
 
             <Route path='/Top500' element={<Top500 accessToken={accessToken}/>} />
             <Route path='/Top5002' element={<Top5002 accessToken={accessToken}/>}/>
