@@ -6,7 +6,7 @@ import "../styles/Top500.css";
 export default function Links () {
     return (
 <>
-    {/*<div className="link--div">
+    <div className="link--div">
         <button className="link--button">~100</button>
             <ul className="link--dropdown">
         
@@ -127,7 +127,7 @@ export default function Links () {
                 <li className="top500--li">481-500</li>
             </Link>
         </ul>
-    </div>*/}
+    </div>
 </>
     )
 }
