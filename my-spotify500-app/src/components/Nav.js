@@ -96,7 +96,7 @@ export default function Nav() {
                     </div>
 
                     <div className='line--item'>
-                        <Link to="./Podcasts"> 
+                        <Link to="./PodcastPage"> 
                             <img src={podcast} className='img--icon' alt='podcast'></img><li id='podcast' className={areElementsHidden ? 'hidden': ''}>Podcast</li>
                         </Link>  
                     </div>
