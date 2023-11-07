@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Authentication from './components/Authentication';
 import Decade from "../src/pages/Decade";
 import Genre from "../src/pages/Genre";
-import Podcasts from "../src/pages/Podcasts";
+import PodcastPage from "../src/pages/PodcastPage";
 import HomePage from './pages/HomePage';
 import Search from './pages/Search';
 /*import LoginPage from './pages/LoginPage';*/
@@ -70,7 +70,7 @@ export default function App() {
             <Route path='/' element={<HomePage  accessToken={accessToken}/>} />
             <Route path='/Decade' element={<Decade />} />
             <Route path='/Genre' element={<Genre />} />
-            <Route path='/Podcasts' element={<Podcasts accessToken={accessToken}/>} />
+            <Route path='/PodcastPage' element={<PodcastPage accessToken={accessToken}/>} />
             <Route path='/Search' element={<Search />}/>
          {/*<Route path='/LoginPage' element={<LoginPage />} />*/}
             <Route path='/MobileSearch' element={<MobileSearch />}/>
