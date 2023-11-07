@@ -2,7 +2,7 @@ import "../styles/Podcasts.css";
 import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";
 import PodcastDisplay from "../components/PodcastDisplay";
-import usePodcastFetcher from "../components/usePodcastFetcher";
+import { usePodcastFetcher } from "../components/usePodcastFetcher";
 
 export default function PodcastPage ({ accessToken }) {
 
