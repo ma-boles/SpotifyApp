@@ -1,12 +1,13 @@
 import "../styles/Podcasts.css";
 /*import right from "../images/chevron-right-solid.svg";
 import left from "../images/chevron-left-solid.svg";*/
-import Podcast from "../components/Podcast";
-import usePodcastData from "../components/usePodcastData";
+import PodcastDisplay from "../components/PodcastDisplay";
+import usePodcastFetcher from "../components/usePodcastFetcher";
 
-export default function PodcastPage ({ podcastId }) {
-    
-    const podcastData = usePodcastData(podcastId);
+export default function PodcastPage ({ accessToken }) {
+
+    const podcastIds = [];
+    const podcastData = usePodcastFetcher({ accessToken, podcastIds });
 
     return (
         <>
@@ -24,12 +25,14 @@ export default function PodcastPage ({ podcastId }) {
             <h2 className="h2--podcasts">Featured Podcasts</h2>
 
             <div className="podcasts">
+                <PodcastDisplay podcastData={podcastData}/>
+
+                {/*<Podcast />
                 <Podcast />
                 <Podcast />
                 <Podcast />
                 <Podcast />
-                <Podcast />
-                <Podcast />
+                <Podcast />*/}
             </div>
             <hr></hr>
 
