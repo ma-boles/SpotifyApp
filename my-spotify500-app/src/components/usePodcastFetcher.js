@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function usePodcastFetcher ({ accessToken, podcastId }) {
+export function usePodcastFetcher ({ accessToken, podcastId }) {
 
     const [ podcastData, setPodcastData ] = useState([]);
 
