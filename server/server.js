@@ -11,8 +11,8 @@ app.use(express.json()); //parse json request bodies
 // authentication 
 app.post('/authenticate', (req, res) => {
     
-    /*const CLIENT_ID = config.CLIENT_ID;
-    const CLIENT_SECRET = config.CLIENT_SECRET;*/
+    /* CLIENT_ID = config.CLIENT_ID;
+     CLIENT_SECRET = config.CLIENT_SECRET;*/
 
     const tokenUrl = "https://accounts.spotify.com/api/token";
 

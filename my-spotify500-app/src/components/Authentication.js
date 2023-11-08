@@ -10,8 +10,8 @@ export default function Authentication({ onTokenObtained }) {
         fetch(tokenUrl, {
             method: 'POST',
         })
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
             const token = data.token;
             onTokenObtained(token); //passes token to parent component
         })
