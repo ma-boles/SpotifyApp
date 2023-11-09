@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { default as fetch } from 'node-fetch';
 import { CLIENT_ID, CLIENT_SECRET } from './config.js'
+
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -18,7 +19,7 @@ app.post('/authenticate', (req, res) => {
 
     //headers for POST request
     const headers = {
-        'Authorization': 'Basic ' + Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64'),
+        'Authorization': `Basic ${Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64')}`,
         'Content-Type': 'application/x-www-form-urlencoded'
     };
 
@@ -31,17 +32,37 @@ app.post('/authenticate', (req, res) => {
         headers,
         body
     })
-    .then(response => response.json())
+    .then(response => {
+        if(response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Failed to obtain access token');
+        }
+    }) 
     .then(data => {
         const token = data.access_token;
-        res.json({ token }); //send token as response 
+        res.json({ token });
     })
-    .catch((error) => {
-        console.log('Error:', error);
-        res.status(500).json({ error: 'Authentication failed' });
+    .catch(error => {
+        console.error('Error:', error);
+        res.status(400).json({ error: 'Authentication failed' });    
+    })
+    
+    app.listen(port, () => {
+        console.log(`Server is running on port ${port}`);
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+
+/*'Authorization': 'Basic ' + Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64'),
+
+.then(response => response.json())
+.then(data => {
+    const token = data.access_token;
+    res.json({ token }); //send token as response 
+})
+.catch((error) => {
+    console.log('Error:', error);
+    res.status(500).json({ error: 'Authentication failed' });
 });
+});*/
