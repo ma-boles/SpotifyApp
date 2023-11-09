@@ -6,7 +6,7 @@ import { usePodcastFetcher } from "../components/usePodcastFetcher";
 
 export default function PodcastPage ({ accessToken }) {
 
-    const podcastIds = ['33QFO6XsHvF8ltEBWSM9IQ', '1546jYbEXYZTrcxchawoaB', '12P5yq6Feh8W1AUp2JcwyX', '6S2xgtixkuqtPNtvSMbtGd', '1Wup8v02OtjsUiECaQi4fx', '4sAGj4lhX1ZcLeXWetfFvy', '17bGvY9KDZVM9n9GMs9vgr'];
+    const podcastIds = ['33QFO6XsHvF8ltEBWSM9IQ'/*, '1546jYbEXYZTrcxchawoaB', '12P5yq6Feh8W1AUp2JcwyX', '6S2xgtixkuqtPNtvSMbtGd', '1Wup8v02OtjsUiECaQi4fx', '4sAGj4lhX1ZcLeXWetfFvy', '17bGvY9KDZVM9n9GMs9vgr'*/];
     const podcastData = usePodcastFetcher({ accessToken, podcastIds });
 
     return (

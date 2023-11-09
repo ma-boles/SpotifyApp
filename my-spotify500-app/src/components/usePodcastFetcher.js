@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-export function usePodcastFetcher ({ accessToken, podcastId }) {
+export function usePodcastFetcher ( accessToken, podcastIds ) {
 
     const [ podcastData, setPodcastData ] = useState([]);
 
     useEffect(() => {
 
-        const fetchPodcastData = async () => {
+        const fetchPodcastData = async (podcastId) => {
             try {
                 const response = await fetch (`https://api.spotify.com/v1/shows/${podcastId}`, {
                     headers: {
@@ -14,6 +14,38 @@ export function usePodcastFetcher ({ accessToken, podcastId }) {
                     },
                 });
 
+                if(response.status === 200) {
+                    const data = await response.json();
+                    setPodcastData((prevData) => ({
+                        ...prevData,
+                        [podcastId]:data,
+                    }));
+                } else {
+                    console.error('Error fetching podcast data for ', podcastId);
+                    setPodcastData((prevData) => ({
+                        ...prevData,
+                        [podcastId]: null,
+                    }));
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                setPodcastData((prevData) => ({
+                    ...prevData,
+                    [podcastId]: null,
+                }));
+            }
+        };
+        podcastIds.forEach((podcastId) => {
+            fetchPodcastData(podcastId);
+        });
+}, [accessToken, podcastIds]);
+
+    return podcastData;
+}
+
+
+
+/*
                 if(response.status === 200) {
                     const data = await response.json();
                     setPodcastData(data); // update the state with fetched data
@@ -29,8 +61,6 @@ export function usePodcastFetcher ({ accessToken, podcastId }) {
         };
 
         fetchPodcastData(); // call function to initiate the data fetching
-    }, [ accessToken, podcastId ])
+    }, [ accessToken, podcastIds ])
 
-    return podcastData;
-}
-
+return podcastData;*/
