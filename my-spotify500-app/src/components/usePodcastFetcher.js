@@ -6,7 +6,7 @@ export function usePodcastFetcher ( accessToken, podcastIds ) {
 
     useEffect(() => {
 
-        const fetchPodcastData = async (podcastId) => {
+        const fetchDataForPodcast = async (podcastId) => {
             try {
                 const response = await fetch (`https://api.spotify.com/v1/shows/${podcastId}`, {
                     headers: {
@@ -16,27 +16,33 @@ export function usePodcastFetcher ( accessToken, podcastIds ) {
 
                 if(response.status === 200) {
                     const data = await response.json();
-                    setPodcastData((prevData) => ({
-                        ...prevData,
-                        [podcastId]:data,
-                    }));
+                    setPodcastData((prevData) => [
+                        ...prevData, {
+                            id: podcastId,
+                            data
+                        }
+                    ]);
                 } else {
                     console.error('Error fetching podcast data for ', podcastId);
-                    setPodcastData((prevData) => ({
-                        ...prevData,
-                        [podcastId]: null,
-                    }));
+                    setPodcastData((prevData) => [
+                        ...prevData, {
+                            id: podcastId,
+                            data: null
+                        }
+                    ]);
                 }
             } catch (error) {
                 console.error('Error:', error);
-                setPodcastData((prevData) => ({
-                    ...prevData,
-                    [podcastId]: null,
-                }));
+                setPodcastData((prevData) => [
+                    ...prevData, {
+                        id: podcastId,
+                        data: null
+                    }
+                ]);
             }
         };
         podcastIds.forEach((podcastId) => {
-            fetchPodcastData(podcastId);
+            fetchDataForPodcast(podcastId);
         });
 }, [accessToken, podcastIds]);
 
@@ -63,4 +69,26 @@ export function usePodcastFetcher ( accessToken, podcastIds ) {
         fetchPodcastData(); // call function to initiate the data fetching
     }, [ accessToken, podcastIds ])
 
-return podcastData;*/
+return podcastData;
+
+if(response.status === 200) {
+    const data = await response.json();
+    setPodcastData((prevData) => ({
+        ...prevData,
+        [podcastId]:data,
+    }));
+} else {
+    console.error('Error fetching podcast data for ', podcastId);
+    setPodcastData((prevData) => ({
+        ...prevData,
+        [podcastId]: null,
+    }));
+}
+} catch (error) {
+console.error('Error:', error);
+setPodcastData((prevData) => ({
+    ...prevData,
+    [podcastId]: null,
+}));
+}
+};*/
