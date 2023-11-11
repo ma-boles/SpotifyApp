@@ -47,10 +47,11 @@ app.post('/authenticate', (req, res) => {
         console.error('Error:', error);
         res.status(400).json({ error: 'Authentication failed' });    
     })
-    
-    app.listen(port, () => {
-        console.log(`Server is running on port ${port}`);
-    });
+      
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
 
 
