@@ -41,9 +41,18 @@ export function usePodcastFetcher ( accessToken, podcastIds ) {
                 ]);
             }
         };
-        podcastIds.forEach((podcastId) => {
-            fetchDataForPodcast(podcastId);
-        });
+        
+        const fetchDataForAllPodcasts = async () => {
+            try {
+                await Promise.all(podcastIds.map((podcastId) => fetchDataForPodcast(podcastId)));
+            } catch (error) {
+                console.error('Error fetching podcat data:', error);
+            }
+        };
+
+        if(podcastIds.length > 0) {
+            fetchDataForAllPodcasts();
+        }
 }, [accessToken, podcastIds]);
 
     return podcastData;
@@ -91,4 +100,12 @@ setPodcastData((prevData) => ({
     [podcastId]: null,
 }));
 }
-};*/
+};
+
+   podcastIds.forEach((podcastId) => {
+            fetchDataForPodcast(podcastId);
+        });
+}, [accessToken, podcastIds]);
+
+    return podcastData;
+}*/
