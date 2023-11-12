@@ -1,4 +1,6 @@
 import React from "react";
+import right from "../images/chevron-right-solid.svg";
+import left from "../images/chevron-left-solid.svg";
 import "../styles/AudioBooks.css"
 
 export default function AudioBooksPage () {
@@ -13,8 +15,13 @@ export default function AudioBooksPage () {
                 <h1 className="h1--audiobooks">
                     Audiobooks
                 </h1>
+                <div className="audiobooks">
+books
+                </div>
 
             </aside>
+            <hr></hr>
+
         </section>
         </>
     )
