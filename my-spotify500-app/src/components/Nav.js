@@ -103,7 +103,7 @@ export default function Nav() {
 
                     <div className='line--item'>
                         <Link to="./AudioBooksPage"> 
-                            <img src={podcast} className='img--icon' alt='podcast'></img><li id='podcast' className={areElementsHidden ? 'hidden': ''}>Podcast</li>
+                            <img src={podcast} className='img--icon' alt='podcast'></img><li id='podcast' className={areElementsHidden ? 'hidden': ''}>Audiobooks</li>
                         </Link>  
                     </div>
                 </ul>
