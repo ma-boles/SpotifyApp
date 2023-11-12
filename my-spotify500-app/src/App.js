@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import Search from './pages/Search';
 /*import LoginPage from './pages/LoginPage';*/
 import MobileSearch from './pages/MobileSearch';
+import AudioBooksPage from './pages/AudioBooksPage';
 
 import Top500 from "./500pages/Top500";
 import Top5002 from './500pages/Top5002';
@@ -72,6 +73,7 @@ export default function App() {
             <Route path='/Genre' element={<Genre />} />
             <Route path='/PodcastPage' element={<PodcastPage accessToken={accessToken}/>} />
             <Route path='/Search' element={<Search />}/>
+            <Route path='/AudioBooksPage' element={<AudioBooksPage />} />
          {/*<Route path='/LoginPage' element={<LoginPage />} />*/}
             <Route path='/MobileSearch' element={<MobileSearch />}/>
 

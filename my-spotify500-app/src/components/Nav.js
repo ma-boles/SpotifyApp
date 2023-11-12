@@ -100,6 +100,12 @@ export default function Nav() {
                             <img src={podcast} className='img--icon' alt='podcast'></img><li id='podcast' className={areElementsHidden ? 'hidden': ''}>Podcast</li>
                         </Link>  
                     </div>
+
+                    <div className='line--item'>
+                        <Link to="./AudioBooksPage"> 
+                            <img src={podcast} className='img--icon' alt='podcast'></img><li id='podcast' className={areElementsHidden ? 'hidden': ''}>Podcast</li>
+                        </Link>  
+                    </div>
                 </ul>
             </nav>
         </div>
