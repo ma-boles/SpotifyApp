@@ -4,7 +4,11 @@
   "description": "A project using the Spotify API",
   "main": "server.js",
   "scripts": {
-    "test": "(npm test)"
+    "test": "(npm test)",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "server": "node server",
+    "dev": "run-p server start"
   },
   "repository": {
     "type": "git",
