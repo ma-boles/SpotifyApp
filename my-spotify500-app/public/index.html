@@ -24,7 +24,22 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script>
+      window.onSpotifyWebPlaybackSDKReady = () => {
+        const token = "access token"
+
+        const player = new Spotify.Player({
+          name: 'Web Playback SDK',
+          getOAuthToken: (cb) => {
+            cb(token);
+          },
+        });
+        //connect to the player
+        player.connect();
+      };
+    </script>
+    <title>RS500</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
