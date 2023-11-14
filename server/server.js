@@ -1,11 +1,13 @@
 import express from 'express';
 import cors from 'cors';
 import { default as fetch } from 'node-fetch';
-import { CLIENT_ID, CLIENT_SECRET } from './config.js'
+import { CLIENT_ID, CLIENT_SECRET } from './config.js';
+import crypto from 'crypto'
 
 const app = express();
 const port = process.env.PORT || 3001;
 const redirectUri = 'https://your-redirect-uri/callback';
+const validStates = new Set();
 
 app.use(cors()); //enable CORS for all routes
 app.use(express.json()); //parse json request bodies
@@ -13,7 +15,9 @@ app.use(express.json()); //parse json request bodies
 app.get('/login', (req, res) => {
     const scope = 'user-read-playback-state user-modify-playback-state'; //include necessary scopes
     const state = generateRandomString(16);
-    const authorizeUrl = `https://accounts.spotify.com/authorize?response_type=code&client_id=${CLIENT_ID}&scope=${encodeURIComponent(scope)}&redirect_uri=${encodeURIComponent(redirectUri)}&state=${state}`;
+    const codeVerifier = generateRandomString(64);
+    const codeChallenge = generateCodeChallenge(codeVerifier);
+    const authorizeUrl = `https://accounts.spotify.com/authorize?response_type=code&client_id=${CLIENT_ID}&scope=${encodeURIComponent(scope)}&redirect_uri=${encodeURIComponent(redirectUri)}&state=${state}&code_challenge=${codeChallenge}&code_challenge_method=S256`;
     res.redirect(authorizeUrl);
 });
 
@@ -21,6 +25,9 @@ app.get('/callback', async (req, res) => {
     const { code, state } = req.query;
 
     //verify state to prevent csrf attacks
+    if(!isValidState(state)) {
+        return res.status(400).json({ error: 'Invalid state parameter'});
+    }
 
     //exchange authorization code for access token
     const tokenUrl = 'https://accounts.spotify.com/api/token';
@@ -52,96 +59,41 @@ app.get('/callback', async (req, res) => {
     }
 });
 
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+//function to validate the state parameter
+function isValidState(state) {
+    //cheack if the received state is in the set
+    return validStates.has(state);
+}
+
+//function to generate and store a new state
+function generateAndStoreState() {
+    const state = generateRandomString(16);
+    validStates.add(state);
+    return state;
+}
+
+//function to generate a random string
 const generateRandomString = (length) => {
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const values = crypto.getRandomValues(new Uint8Array(length));
-    return values.reduce((acc, x) => acc + possible[x % possible.length],"");
+    const values = crypto.randomBytes(length);
+    return Array.from(values, (byte) => possible[byte % possible.length]).join('');
 }
 
-const codeVerifier = generateRandomString(64);
- 
-const sha256 = async (plain) => {
-    const encoder = new TextEncoder()
-    const data = encoder.encode(plain)
-    return window.crypto.subtle.digest('SHA-256', data)
+function generateCodeChallenge(verifier) {
+    const hashed = crypto.createHash('sha256').update(verifier).digest();
+    return base64encode(hashed);
+    
 }
 
-const base64encode = (input) => {
-    return btoa(String.fromCharCode(...new Uint8Array(input)))
+function base64encode(input) {
+    return Buffer.from(input)
+    .toString('base64')
     .replace(/=/g, '')
     .replace(/\+/g, '-')
-    .replace(/\//g, '_')
+    .replace(/\//g, '_');
 }
-
-const hashed = await sha256(codeVerifier)
-const codeChallenge = base64encode(hashed);
-
-
-/*'Authorization': 'Basic ' + Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64'),
-
-.then(response => response.json())
-.then(data => {
-    const token = data.access_token;
-    res.json({ token }); //send token as response 
-})
-.catch((error) => {
-    console.log('Error:', error);
-    res.status(500).json({ error: 'Authentication failed' });
-});
-});
-
-
-
-
-
-
-
-// authentication 
-app.post('/authenticate', (req, res) => {
-    
-    /* CLIENT_ID = config.CLIENT_ID;
-     CLIENT_SECRET = config.CLIENT_SECRET;*/
-
-     /*const tokenUrl = "https://accounts.spotify.com/api/token";*/
-
-     //headers for POST request
-    /* const headers = {
-         'Authorization': `Basic ${Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64')}`,
-         'Content-Type': 'application/x-www-form-urlencoded'
-     };*/
- 
-     //request body
-    /* const body = 'grant_type=client_credentials';*/
- 
-     //POST request to get access token 
-    /* fetch(tokenUrl, {
-         method: 'POST',
-         headers,
-         body
-     })
-     .then(response => {
-         if(response.ok) {
-             return response.json();
-         } else {
-             throw new Error('Failed to obtain access token');
-         }
-     }) 
-     .then(data => {
-         const token = data.access_token;
-         res.json({ token });
-     })
-     .catch(error => {
-         console.error('Error:', error);
-         res.status(400).json({ error: 'Authentication failed' });    
-     })
-       
- });
- 
- app.listen(port, () => {
-     console.log(`Server is running on port ${port}`);
- });
- 
- */
