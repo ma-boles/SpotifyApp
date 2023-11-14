@@ -6,7 +6,7 @@ import crypto from 'crypto'
 
 const app = express();
 const port = process.env.PORT || 3001;
-const redirectUri = 'https://localhost:3000/callback';
+const redirectUri = 'https://localhost:3001/callback';
 const validStates = new Set();
 
 app.use(cors()); //enable CORS for all routes
