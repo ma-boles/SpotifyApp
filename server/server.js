@@ -4,8 +4,9 @@ import { default as fetch } from 'node-fetch';
 import { CLIENT_ID, CLIENT_SECRET } from './config.js';
 import crypto from 'crypto';
 import https from 'https';
-import fs from 'fs';
+import fs, { readFileSync } from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -16,8 +17,8 @@ const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
 
 const credentials = {
-    key: fs.readFileSync(path.join(__dirname, '../localhost.key')),
-    cert: fs.readFileSync(path.join(__dirname, '../localhost.crt')),
+    key: fs.readFileSync('C:\\Users\\USER\\SpotifyApp\\localhost.key'),
+    cert: fs.readFileSync('C:\\Users\\USER\\SpotifyApp\\localhost.crt'),
 };
 
 app.use(cors()); //enable CORS for all routes
