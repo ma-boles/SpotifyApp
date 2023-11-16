@@ -4,6 +4,7 @@
   "description": "A project using the Spotify API",
   "main": "server.js",
   "scripts": {
+    "start": "HTTPS=true react-scripts start",
     "test": "(npm test)"
   },
   "repository": {
