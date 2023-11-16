@@ -3,19 +3,21 @@ import cors from 'cors';
 import { default as fetch } from 'node-fetch';
 import { CLIENT_ID, CLIENT_SECRET } from './config.js';
 import crypto from 'crypto';
-
-const https = require('https');
-const fs = require('fs');
-const path = require('path');
+import https from 'https';
+import fs from 'fs';
+import path from 'path';
 
 const app = express();
 const port = process.env.PORT || 3001;
 const redirectUri = 'https://localhost:3001/callback';
 const validStates = new Set();
 
+const __filename = new URL(import.meta.url).pathname;
+const __dirname = path.dirname(__filename);
+
 const credentials = {
-    key: fs.readFileSync(path.resolve(__dirname, '../localhost.key')),
-    cert: fs.readFileSync(path.resolve(__dirname, '../localhost.crt')),
+    key: fs.readFileSync(path.join(__dirname, '../localhost.key')),
+    cert: fs.readFileSync(path.join(__dirname, '../localhost.crt')),
 };
 
 app.use(cors()); //enable CORS for all routes
