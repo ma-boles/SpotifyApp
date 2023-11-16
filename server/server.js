@@ -2,12 +2,21 @@ import express from 'express';
 import cors from 'cors';
 import { default as fetch } from 'node-fetch';
 import { CLIENT_ID, CLIENT_SECRET } from './config.js';
-import crypto from 'crypto'
+import crypto from 'crypto';
+
+const https = require('https');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3001;
 const redirectUri = 'https://localhost:3001/callback';
 const validStates = new Set();
+
+const credentials = {
+    key: fs.readFileSync(path.resolve(__dirname, '../localhost.key')),
+    cert: fs.readFileSync(path.resolve(__dirname, '../localhost.crt')),
+};
 
 app.use(cors()); //enable CORS for all routes
 app.use(express.json()); //parse json request bodies
@@ -59,10 +68,10 @@ app.get('/callback', async (req, res) => {
     }
 });
 
+https.createServer(credentials, app).listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+})
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
 
 //function to validate the state parameter
 function isValidState(state) {
@@ -97,3 +106,7 @@ function base64encode(input) {
     .replace(/\+/g, '-')
     .replace(/\//g, '_');
 }
+
+/*app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});*/
